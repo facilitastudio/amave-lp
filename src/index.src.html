@@ -151,14 +151,20 @@ html{scroll-behavior:smooth}
 
 .two>div,.oq__top>div{min-width:0}.h2 .b{display:block;white-space:nowrap}.h2 .b em{display:inline;font-size:1.3em}.h2 em{white-space:nowrap}
 .h2 .sm{white-space:nowrap}
-.hero__txt>.label,.sec .label,.cta>.label{display:inline-block;position:relative;padding-bottom:7px}
-.hero__txt>.label::after,.sec .label::after,.cta>.label::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform 2.6s cubic-bezier(.45,.05,.25,1) .35s}
-.hero__txt>.label.in::after,.sec .label.in::after,.cta>.label.in::after{transform:scaleX(1)}
+.hero__txt>.label,.sec .label,.cta>.label,.res>.label{display:inline-block;position:relative;padding-bottom:7px}
+.hero__txt>.label::after,.sec .label::after,.cta>.label::after,.res>.label::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform 2.6s cubic-bezier(.45,.05,.25,1) .35s}
+.hero__txt>.label.in::after,.sec .label.in::after,.cta>.label.in::after,.res>.label.in::after{transform:scaleX(1)}
 .print .label{padding-bottom:0}.print .label::after{display:none}
 /* escrita nas palavras italicas */
 .h2 em,.cta h2 em,.hero h1 .l2 em{clip-path:inset(-.25em 100% -.25em -.15em);transition:clip-path 1.7s cubic-bezier(.6,.05,.2,1) .35s}
 .h2.in em,.cta h2.in em,.loaded .hero h1 .l2 em{clip-path:inset(-.25em -.15em -.25em -.15em)}
 
+.quem{background:var(--marrom);color:var(--creme)}
+.quem .label{color:var(--bege)}
+.quem .h2{color:var(--creme)}
+.quem .h2 .script{color:var(--bege)}
+.quem__txt p:not(.label){color:rgba(242,236,232,.9)}
+.quem .quem__ph{background:var(--bege)}.quem .print .label{color:var(--marrom)}.quem .print small{color:rgba(51,51,51,.6)}
 /* quem esta por tras */
 .quem__grid{display:grid;grid-template-columns:5fr 6fr;gap:96px;align-items:center;max-width:1140px;margin:0 auto}
 .quem__img{position:relative}
@@ -167,7 +173,7 @@ html{scroll-behavior:smooth}
 .quem__sym{object-fit:contain}
 @keyframes gira{to{transform:rotate(360deg)}}
 .quem__txt .h2{margin:24px 0 28px}
-.quem__txt p:not(.label){font-size:18px;color:rgba(51,51,51,.85);margin-bottom:20px;max-width:540px}
+.quem__txt p:not(.label){font-size:18px;margin-bottom:20px;max-width:540px}
 .quem__txt .btn{margin-top:20px}
 
 /* depoimentos */
@@ -404,14 +410,14 @@ html{scroll-behavior:smooth}
   <div class="quem__grid">
     <div class="quem__img rv from-l">
       <div class="print quem__ph"><span class="label">Foto do fundador</span><small>Substituir pela foto enviada pelo cliente</small></div>
-      <img class="quem__sym" src="img/simbolo.webp" alt="" aria-hidden="true" width="96" height="96">
+      <img class="quem__sym" src="img/simbolo-creme.webp" alt="" aria-hidden="true" width="96" height="96">
     </div>
     <div class="quem__txt">
       <p class="label rv">Quem está por trás da Amave</p>
       <h2 class="h2 rv" style="--d:.1s"><span class="b">Nome do fundador,</span><em>direção criativa</em><span class="sm">e&nbsp;estratégia</span></h2>
       <p class="rv" style="--d:.2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&nbsp;consequat.</p>
       <p class="rv" style="--d:.3s">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est&nbsp;laborum.</p>
-      <div class="rv" style="--d:.4s"><a class="btn" href="{{WA}}" target="_blank" rel="noopener">Entrar em contato agora mesmo<span class="ic">{{ARROW}}</span></a></div>
+      <div class="rv" style="--d:.4s"><a class="btn btn--claro" href="{{WA}}" target="_blank" rel="noopener">Entrar em contato agora mesmo<span class="ic">{{ARROW}}</span></a></div>
     </div>
   </div>
 </section>
