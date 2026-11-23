@@ -131,6 +131,18 @@ a{color:inherit;text-decoration:none}
 .etapa h3{font-family:var(--serif);font-weight:300;font-size:32px;letter-spacing:-.03em;margin:18px 0}
 .etapa p{font-size:18px;color:rgba(51,51,51,.85)}
 
+
+/* quem esta por tras */
+.quem__grid{display:grid;grid-template-columns:5fr 6fr;gap:96px;align-items:center;max-width:1140px;margin:0 auto}
+.quem__img{position:relative}
+.quem__img img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.quem__sym{position:absolute;top:-36px;right:-36px;width:96px;height:96px;color:var(--marrom);animation:gira 28s linear infinite}
+.quem__sym svg{width:100%;height:100%;display:block}
+@keyframes gira{to{transform:rotate(360deg)}}
+.quem__txt .h2{margin:24px 0 28px}
+.quem__txt p:not(.label){font-size:18px;color:rgba(51,51,51,.85);margin-bottom:20px;max-width:540px}
+.quem__txt .btn{margin-top:20px}
+
 /* depoimentos */
 .dep .h2{margin:24px 0 64px}
 .prints{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
@@ -200,6 +212,9 @@ a{color:inherit;text-decoration:none}
   .pilares,.etapas{grid-template-columns:1fr;gap:0}
   .pilar,.etapa{padding:22px 0}
   .prints{grid-template-columns:1fr 1fr;gap:16px}
+  .quem__grid{grid-template-columns:1fr;gap:56px}
+  .quem__img{max-width:520px}
+  .quem__sym{right:-12px;top:-28px;width:84px;height:84px}
 }
 @media (max-width:600px){
   body{font-size:16px}
@@ -236,6 +251,7 @@ a{color:inherit;text-decoration:none}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
+  .quem__sym{animation:none!important}
   .rv,.card,.stripe,.hero h1 .ln>span,.script{opacity:1!important;transform:none!important;clip-path:none!important}
 }
 </style>
@@ -335,13 +351,29 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <section class="sec dep">
-  <p class="label rv">Depoimentos</p>
-  <h2 class="h2 rv" style="--d:.1s">Marcas que confiaram na&nbsp;Amave</h2>
+  <p class="label rv">Feedback</p>
+  <h2 class="h2 rv" style="--d:.1s">O que nossos clientes falam sobre a&nbsp;Amave</h2>
   <div class="prints">
-    <div class="print rv zoom"><span class="label">Print de depoimento 1</span><small>Substituir pelo print enviado pelo cliente</small></div>
-    <div class="print rv zoom" style="--d:.1s"><span class="label">Print de depoimento 2</span><small>Substituir pelo print enviado pelo cliente</small></div>
-    <div class="print rv zoom" style="--d:.2s"><span class="label">Print de depoimento 3</span><small>Substituir pelo print enviado pelo cliente</small></div>
-    <div class="print rv zoom" style="--d:.3s"><span class="label">Print de depoimento 4</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom"><span class="label">Print de WhatsApp 1</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom" style="--d:.1s"><span class="label">Print de WhatsApp 2</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom" style="--d:.2s"><span class="label">Print de WhatsApp 3</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom" style="--d:.3s"><span class="label">Print de WhatsApp 4</span><small>Substituir pelo print enviado pelo cliente</small></div>
+  </div>
+</section>
+
+<section class="sec quem">
+  <div class="quem__grid">
+    <div class="quem__img rv from-l">
+      <img src="img/fundadora.webp" alt="Retrato da fundadora do Estúdio Amave" width="1100" height="1375" loading="lazy">
+      <span class="quem__sym" aria-hidden="true">{{SYM}}</span>
+    </div>
+    <div class="quem__txt">
+      <p class="label rv">Quem está por trás da Amave</p>
+      <h2 class="h2 rv" style="--d:.1s">Nome da fundadora, direção criativa e&nbsp;estratégia</h2>
+      <p class="rv" style="--d:.2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&nbsp;consequat.</p>
+      <p class="rv" style="--d:.3s">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est&nbsp;laborum.</p>
+      <div class="rv" style="--d:.4s"><a class="btn" href="{{WA}}" target="_blank" rel="noopener">Conversar com o estúdio<span class="ic">{{ARROW}}</span></a></div>
+    </div>
   </div>
 </section>
 

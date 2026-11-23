@@ -22,6 +22,8 @@ out=out.replace('.hero__vis{position:absolute;inset:0 0 0 auto;width:calc(100% -
  '.hero__vis{position:absolute;top:0;bottom:0;right:0;left:min(calc(var(--pad) + 770px), calc(100vw - 554px));z-index:1}')
 out=out.replace('.card{position:absolute;left:4.4%;','.card{position:absolute;left:30px;')
 out=out.replace('@media (max-width:1100px){','@media (max-width:1240px){\n  .stripe{left:var(--xm);width:var(--wm)}\n  .hero__vis{left:auto;right:auto;top:auto;bottom:auto}')
+symsvg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 61 60"><circle cx="28.5" cy="28" r="29" fill="#F2ECE8"/>'+''.join(re.findall(r'<path[^>]*/>',logo)[1:]).replace('<path','<path fill="currentColor"')+'</svg>'
+out=out.replace('{{SYM}}',symsvg)
 assert '{{' not in out
 import re
 def nb(m):
