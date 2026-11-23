@@ -71,8 +71,8 @@ a{color:inherit;text-decoration:none}
 .hero h1 .l3{font-size:.5em;letter-spacing:-.02em;line-height:1.2;margin-top:.5em}
 .loaded .hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
 .loaded .hero h1 .ln:nth-child(3)>span{transition-delay:.24s}
-.script{position:absolute;left:-26px;top:-18px;font-family:var(--script);font-size:96px;line-height:1;color:var(--marrom);opacity:0;pointer-events:none;letter-spacing:0;clip-path:inset(0 100% 0 0);transition:clip-path 1.6s var(--ease) .7s,opacity .6s .7s}
-.loaded .script{opacity:.85;clip-path:inset(0 0 0 0)}
+.script{position:absolute;left:-26px;top:-18px;font-family:var(--script);font-size:96px;line-height:1;color:var(--marrom);opacity:0;pointer-events:none;letter-spacing:0;clip-path:inset(-.4em 100% -.4em -.6em);transition:clip-path 1.6s var(--ease) .7s,opacity .6s .7s}
+.loaded .script{opacity:.85;clip-path:inset(-.4em -.6em -.4em -.6em)}
 .hero__sub{font-size:19px;max-width:468px;color:rgba(51,51,51,.85);margin-bottom:40px}
 .hero__vis{position:absolute;top:0;bottom:0;right:0;left:min(calc(var(--pad) + 770px), calc(100vw - 554px));z-index:1}
 .stripes{position:absolute;inset:128px 0 0 0;overflow:hidden}
@@ -141,9 +141,9 @@ a{color:inherit;text-decoration:none}
 .h2{position:relative}
 .h2 em,.cta h2 em{font-style:italic;font-size:1.3em;letter-spacing:-.04em;line-height:1.02;display:block;padding-right:.06em}
 .h2 .sm{display:block;font-size:.55em;line-height:1.25;letter-spacing:-.02em;margin-top:.5em}
-.h2 .script,.cta h2 .script{position:absolute;left:-.32em;top:-.18em;font-size:1.3em;color:var(--marrom);opacity:0;clip-path:inset(0 100% 0 0);transition:clip-path 0s,opacity .3s;pointer-events:none;font-style:normal}
+.h2 .script,.cta h2 .script{position:absolute;left:-.32em;top:-.18em;font-size:1.3em;color:var(--marrom);opacity:0;clip-path:inset(-.4em 100% -.4em -.6em);transition:clip-path 0s,opacity .3s;pointer-events:none;font-style:normal}
 .cta h2 .script{color:var(--bege)}
-.h2.in .script,.cta h2.in .script{opacity:.85;clip-path:inset(0 0 0 0);transition:clip-path 1.8s cubic-bezier(.6,.05,.2,1) .5s,opacity .4s .5s}
+.h2.in .script,.cta h2.in .script{opacity:.85;clip-path:inset(-.4em -.6em -.4em -.6em);transition:clip-path 1.8s cubic-bezier(.6,.05,.2,1) .5s,opacity .4s .5s}
 .cta h2{position:relative}
 html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
 html{scroll-behavior:smooth}
@@ -280,7 +280,7 @@ html{scroll-behavior:smooth}
   .rodape__info{font-size:16px;width:auto}
   .rodape hr{margin:32px 0}
 }
-@media (max-width:600px){.h2 .script{left:-.12em}}
+@media (max-width:600px){.h2 .script{left:.04em;top:-.28em;font-size:1.15em}}
 @media (max-width:390px){.cta h2{font-size:40px}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
