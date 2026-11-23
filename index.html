@@ -71,8 +71,8 @@ a{color:inherit;text-decoration:none}
 .hero h1 .l3{font-size:.5em;letter-spacing:-.02em;line-height:1.2;margin-top:.5em}
 .loaded .hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
 .loaded .hero h1 .ln:nth-child(3)>span{transition-delay:.24s}
-.script{position:absolute;left:-26px;top:-18px;font-family:var(--script);font-size:96px;line-height:1;color:var(--marrom);opacity:0;pointer-events:none;letter-spacing:0;clip-path:inset(-.4em 100% -.4em -.6em);transition:clip-path 1.6s var(--ease) .7s,opacity .6s .7s}
-.loaded .script{opacity:.85;clip-path:inset(-.4em -.6em -.4em -.6em)}
+.script{position:absolute;left:-26px;top:-18px;font-family:var(--script);font-size:80px;line-height:1;color:var(--marrom);opacity:0;pointer-events:none;letter-spacing:0;rotate:-14deg;transform-origin:30% 80%;clip-path:inset(-.4em 100% -.4em -.6em);transition:clip-path 1.6s var(--ease) .7s,opacity .6s .7s}
+.loaded .script{opacity:.6;clip-path:inset(-.4em -.6em -.4em -.6em)}
 .hero__sub{font-size:19px;max-width:468px;color:rgba(51,51,51,.85);margin-bottom:40px}
 .hero__vis{position:absolute;top:0;bottom:0;right:0;left:min(calc(var(--pad) + 770px), calc(100vw - 554px));z-index:1}
 .stripes{position:absolute;inset:128px 0 0 0;overflow:hidden}
@@ -141,14 +141,15 @@ a{color:inherit;text-decoration:none}
 .h2{position:relative}
 .h2 em,.cta h2 em{font-style:italic;font-size:1.3em;letter-spacing:-.04em;line-height:1.02;display:block;padding-right:.06em}
 .h2 .sm{display:block;font-size:.55em;line-height:1.25;letter-spacing:-.02em;margin-top:.5em}
-.h2 .script,.cta h2 .script{position:absolute;left:-.32em;top:-.18em;font-size:1.3em;color:var(--marrom);opacity:0;clip-path:inset(-.4em 100% -.4em -.6em);transition:clip-path 0s,opacity .3s;pointer-events:none;font-style:normal}
+.h2 .script,.cta h2 .script{rotate:-14deg;position:absolute;left:-.32em;top:-.18em;font-size:1.3em;color:var(--marrom);opacity:0;clip-path:inset(-.4em 100% -.4em -.6em);transition:clip-path 0s,opacity .3s;pointer-events:none;font-style:normal}
 .cta h2 .script{color:var(--bege)}
-.h2.in .script,.cta h2.in .script{opacity:.85;clip-path:inset(-.4em -.6em -.4em -.6em);transition:clip-path 1.8s cubic-bezier(.6,.05,.2,1) .5s,opacity .4s .5s}
+.h2.in .script,.cta h2.in .script{opacity:.6;rotate:-14deg;clip-path:inset(-.4em -.6em -.4em -.6em);transition:clip-path 1.8s cubic-bezier(.6,.05,.2,1) .5s,opacity .4s .5s}
 .cta h2{position:relative}
 html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
 html{scroll-behavior:smooth}
 
 
+.two>div,.oq__top>div{min-width:0}.h2 .b{display:block;white-space:nowrap}.h2 .b em{display:inline;font-size:1.3em}.h2 em{white-space:nowrap}
 /* escrita nas palavras italicas */
 .h2 em,.cta h2 em,.hero h1 .l2 em{clip-path:inset(-.25em 100% -.25em -.15em);transition:clip-path 1.7s cubic-bezier(.6,.05,.2,1) .35s}
 .h2.in em,.cta h2.in em,.loaded .hero h1 .l2 em{clip-path:inset(-.25em -.15em -.25em -.15em)}
@@ -256,7 +257,7 @@ html{scroll-behavior:smooth}
   .hero{padding-top:99px}
   .hero__txt{padding-top:0}
   .hero h1{font-size:min(60px,calc((100vw - 48px)/6.5));margin:22px 0 26px}
-  .script{font-size:70px;left:-18px;top:-14px}
+  .script{font-size:58px;left:-14px;top:-10px}
   .hero__sub{font-size:17px}
   .hero .btn,.res .btn,.cta .btn{width:100%;justify-content:space-between}
   .sec{padding:80px var(--pad)}
@@ -331,7 +332,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
   <div class="two">
     <div class="two__head">
       <p class="label rv">Identificação</p>
-      <h2 class="h2 rv" style="--d:.1s">Você se <em>identifica?</em></h2>
+      <h2 class="h2 rv" style="--d:.1s"><span class="b">Você se <em>identifica?</em></span></h2>
       <p class="rv" style="--d:.2s">Se alguma dessas frases já passou pela sua cabeça, a Amave foi feita&nbsp;para&nbsp;você.</p>
     </div>
     <ol class="lista">
@@ -354,7 +355,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 
 <section class="sec">
   <div class="oq__top">
-    <div><p class="label rv">Identidade&nbsp;visual</p><h2 class="h2 rv" style="--d:.1s">Uma marca <em>sólida,</em><span class="sm">sofisticada&nbsp;e&nbsp;relevante</span></h2></div>
+    <div><p class="label rv">Identidade&nbsp;visual</p><h2 class="h2 rv" style="--d:.1s"><span class="b">Uma marca <em>sólida,</em></span><span class="sm">sofisticada&nbsp;e&nbsp;relevante</span></h2></div>
     <p class="rv" style="--d:.2s">O Estúdio Amave oferece soluções completas para marcas que desejam construir uma presença sólida, sofisticada e relevante em seus mercados. Nosso trabalho integra estratégia, identidade, comunicação e posicionamento, acompanhando cada marca desde a concepção até o fortalecimento da presença no&nbsp;ambiente&nbsp;digital.</p>
   </div>
   <div class="pilares">
@@ -367,7 +368,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 
 <section class="sec proc">
   <p class="label rv">Como&nbsp;funciona</p>
-  <h2 class="h2 rv" style="--d:.1s">Do primeiro contato ao <em>resultado&nbsp;final</em></h2>
+  <h2 class="h2 rv" style="--d:.1s"><span class="b">Do primeiro&nbsp;contato</span><span class="b">ao <em>resultado&nbsp;final</em></span></h2>
   <div class="etapas">
     <div class="etapa rv"><b>I</b><h3>Conversa&nbsp;inicial</h3><p>Cada projeto começa com uma conversa para compreender a história, os objetivos, as particularidades e o momento da&nbsp;sua&nbsp;marca.</p></div>
     <div class="etapa rv" style="--d:.15s"><b>II</b><h3>Processo&nbsp;estruturado</h3><p>A partir desse primeiro contato, conduzimos você por um processo estruturado, com direção criativa e estratégica em&nbsp;cada&nbsp;etapa.</p></div>
@@ -377,7 +378,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 
 <section class="sec dif">
   <div class="two">
-    <div><p class="label rv">Diferenciais</p><h2 class="h2 rv" style="--d:.1s">Por que escolher o Estúdio <em>Amave</em></h2></div>
+    <div><p class="label rv">Diferenciais</p><h2 class="h2 rv" style="--d:.1s"><span class="b">Por que escolher o&nbsp;Estúdio</span><em>Amave</em></h2></div>
     <ol class="lista">
       <li class="rv from-r"><i>I</i><span>Mais de 5 anos de experiência no mercado&nbsp;criativo.</span></li>
       <li class="rv from-r" style="--d:.07s"><i>II</i><span>Mais de 400 projetos&nbsp;desenvolvidos.</span></li>
@@ -392,7 +393,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 
 <section class="sec dep">
   <p class="label rv">Feedback</p>
-  <h2 class="h2 rv" style="--d:.1s">O que nossos clientes <em>falam</em><span class="sm">sobre&nbsp;a&nbsp;Amave</span></h2>
+  <h2 class="h2 rv" style="--d:.1s"><span class="b">O que nossos&nbsp;clientes</span><em>falam sobre&nbsp;nós</em></h2>
   <div class="prints">
     <div class="print rv zoom"><span class="label">Print de WhatsApp&nbsp;1</span><small>Substituir pelo print enviado pelo&nbsp;cliente</small></div>
     <div class="print rv zoom" style="--d:.1s"><span class="label">Print de WhatsApp&nbsp;2</span><small>Substituir pelo print enviado pelo&nbsp;cliente</small></div>
@@ -419,7 +420,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 
 <section class="sec faq">
   <div class="two">
-    <div><p class="label rv">Dúvidas</p><h2 class="h2 rv" style="--d:.1s">Antes de começar, tire <em>suas&nbsp;dúvidas</em></h2></div>
+    <div><p class="label rv">Dúvidas</p><h2 class="h2 rv" style="--d:.1s"><span class="b">Antes de&nbsp;começar,</span><em>tire suas&nbsp;dúvidas</em></h2></div>
     <div>
       <div class="qa open rv" style="--d:0.0s"><button aria-expanded="true">Será que o investimento realmente vai valer a&nbsp;pena?<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Uma identidade com personalidade e valor percebido ajuda sua marca a atrair clientes que valorizam o seu trabalho, sem precisar disputar atenção pelo&nbsp;menor&nbsp;preço.</p></div></div></div><div class="qa open rv" style="--d:0.1s"><button aria-expanded="true">Será que o estúdio vai compreender a essência do meu&nbsp;negócio?<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Todo projeto começa com uma conversa para entender a sua história, os seus objetivos e o momento da marca. É a partir dela que a identidade&nbsp;é&nbsp;construída.</p></div></div></div><div class="qa open rv" style="--d:0.2s"><button aria-expanded="true">Já contratei profissionais antes e não tive a experiência que&nbsp;esperava.<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Nosso atendimento é próximo, consultivo e personalizado, com direção criativa e estratégica em cada projeto e atenção&nbsp;aos&nbsp;detalhes.</p></div></div></div><div class="qa open rv" style="--d:0.3s"><button aria-expanded="true">Vou ter o suporte e a atenção que meu negócio&nbsp;merece?<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Acompanhamos cada marca da concepção até o fortalecimento da presença no digital. Hoje, 15 marcas contam com a nossa gestão de redes há mais de&nbsp;3&nbsp;anos.</p></div></div></div>
     </div>
@@ -465,10 +466,14 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
   var h=d.querySelector('.header');
   function onS(){h.classList.toggle('scrolled',scrollY>40);par()}
   // reveal
-  d.querySelectorAll('.h2').forEach(function(t){var tx=t.textContent.trim().charAt(0);if(!tx)return;var s=d.createElement('span');s.className='script';s.setAttribute('aria-hidden','true');s.textContent=tx;t.insertBefore(s,t.firstChild)});
+  d.querySelectorAll('.quem .h2').forEach(function(t){var tx=t.textContent.trim().charAt(0);if(!tx)return;var s=d.createElement('span');s.className='script';s.setAttribute('aria-hidden','true');s.textContent=tx;t.insertBefore(s,t.firstChild)});
   d.querySelectorAll('.h2').forEach(function(t){t.classList.add('rv')});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){var t=e.target;if(e.isIntersecting){t.classList.remove('out-up');t.classList.add('in');var c=t.querySelector('[data-count]');if(c)count(c)}else{t.classList.remove('in');t.classList.toggle('out-up',e.boundingClientRect.top<0)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  function fit(){d.querySelectorAll('.h2').forEach(function(h){if(!h.querySelector('.b'))return;h.style.fontSize='';var fs=parseFloat(getComputedStyle(h).fontSize),av=h.clientWidth,mx=0;
+    h.querySelectorAll('.b,em').forEach(function(x){if(x.closest('.b')&&x.tagName=='EM')return;var r=document.createRange();r.selectNodeContents(x);mx=Math.max(mx,r.getBoundingClientRect().width)});
+    if(mx>av)h.style.fontSize=(fs*av/mx*.98).toFixed(2)+'px'})}
+  (d.fonts&&d.fonts.ready?d.fonts.ready:Promise.resolve()).then(fit);addEventListener('resize',fit);fit();
   var hero=d.querySelector('.hero');
   new IntersectionObserver(function(es){es.forEach(function(e){d.documentElement.classList.toggle('loaded',e.isIntersecting)})},{threshold:0}).observe(hero);
   // contadores
