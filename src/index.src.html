@@ -57,7 +57,8 @@ a{color:inherit;text-decoration:none}
 .header .logo{width:179px;color:var(--carvao);transition:width .5s var(--ease)}
 .header.scrolled{height:84px;background:rgba(242,236,232,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(51,51,51,.08)}
 .header.scrolled .logo{width:140px}
-.header .btn{display:none}
+.header .btn{display:none;transition:background .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease)}
+.header.scrolled .btn{--bg:var(--marrom);--fg:var(--creme);--cbg:var(--creme);--cfg:var(--marrom);--bd:transparent}
 
 /* hero */
 .hero{position:relative;min-height:960px;padding:0 var(--pad);display:flex;align-items:center;overflow:hidden}
@@ -269,7 +270,7 @@ a{color:inherit;text-decoration:none}
 
 <header class="header" id="topo">
   <a href="#" aria-label="Estúdio Amave, início">{{LOGO}}</a>
-  <a class="btn" href="{{WA}}" target="_blank" rel="noopener"><span class="t-full">Chamar no WhatsApp</span><span class="t-short">WhatsApp</span><span class="ic">{{ARROW}}</span></a>
+  <a class="btn btn--contorno" href="{{WA}}" target="_blank" rel="noopener"><span class="t-full">Chamar no WhatsApp</span><span class="t-short">WhatsApp</span><span class="ic">{{ARROW}}</span></a>
 </header>
 
 <main>
