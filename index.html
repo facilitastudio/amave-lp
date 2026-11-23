@@ -148,6 +148,11 @@ a{color:inherit;text-decoration:none}
 html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
 html{scroll-behavior:smooth}
 
+
+/* escrita nas palavras italicas */
+.h2 em,.cta h2 em,.hero h1 .l2 em{clip-path:inset(-.25em 100% -.25em -.15em);transition:clip-path 1.7s cubic-bezier(.6,.05,.2,1) .35s}
+.h2.in em,.cta h2.in em,.loaded .hero h1 .l2 em{clip-path:inset(-.25em -.15em -.25em -.15em)}
+
 /* quem esta por tras */
 .quem__grid{display:grid;grid-template-columns:5fr 6fr;gap:96px;align-items:center;max-width:1140px;margin:0 auto}
 .quem__img{position:relative}
@@ -280,7 +285,8 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .quem__sym{animation:none!important}
-  .rv,.card,.stripe,.hero h1 .ln>span,.script,.h2 .script{opacity:1!important;transform:none!important;clip-path:none!important}
+  .rv,.card,.stripe,.hero h1 .ln>span,.h2 em,.cta h2 em,.hero h1 .l2 em{clip-path:none!important}
+  .script,.h2 .script{opacity:1!important;transform:none!important;clip-path:none!important}
 }
 h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 </head>
@@ -309,7 +315,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
     <div class="stripes" data-parallax=".12"><span class="stripe" style="--x:0px;--w:22px;--xm:4.37%;--wm:14px;opacity:0.55;transition-delay:0.15s"></span><span class="stripe" style="--x:68px;--w:16px;--xm:16.99%;--wm:20px;opacity:0.92;transition-delay:0.22s"></span><span class="stripe" style="--x:143px;--w:30px;--xm:31.07%;--wm:12px;opacity:0.89;transition-delay:0.29s"></span><span class="stripe" style="--x:245px;--w:18px;--xm:47.57%;--wm:18px;opacity:0.86;transition-delay:0.36s"></span><span class="stripe" style="--x:320px;--w:26px;--xm:61.17%;--wm:14px;opacity:0.83;transition-delay:0.43s"></span><span class="stripe" style="--x:416px;--w:14px;--xm:75.24%;--wm:20px;opacity:0.8;transition-delay:0.50s"></span><span class="stripe" style="--x:485px;--w:28px;--xm:88.83%;--wm:16px;opacity:0.77;transition-delay:0.57s"></span><span class="stripe" style="--x:581px;--w:20px;--xm:-100px;--wm:0px;opacity:0.74;transition-delay:0.64s"></span><span class="stripe" style="--x:654px;--w:24px;--xm:-100px;--wm:0px;opacity:0.71;transition-delay:0.71s"></span></div>
     <div class="card" data-parallax="-.06">
       <img class="card__img" src="img/mockup.webp" width="404" height="344" alt="Notebooks com a marca Amave na tela">
-      <div class="card__cap"><span class="label">Identidade visual com&nbsp;estratégia</span><em>Estúdio boutique de branding</em></div>
+      <div class="card__cap"><span class="label">Identidade visual com&nbsp;estratégia</span><em>Estúdio boutique de&nbsp;branding</em></div>
     </div>
   </div>
 </section>
@@ -329,11 +335,11 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
       <p class="rv" style="--d:.2s">Se alguma dessas frases já passou pela sua cabeça, a Amave foi feita&nbsp;para&nbsp;você.</p>
     </div>
     <ol class="lista">
-      <li class="rv from-r"><i>01</i><span>Meu negócio cresceu, mas minha marca ainda não transmite o nível de profissionalismo que&nbsp;eu&nbsp;entrego.</span></li>
-      <li class="rv from-r" style="--d:.08s"><i>02</i><span>Olho para outras marcas do meu segmento e sinto que minha apresentação poderia ser&nbsp;muito&nbsp;melhor.</span></li>
-      <li class="rv from-r" style="--d:.16s"><i>03</i><span>Quero atrair clientes que valorizem meu trabalho, mas tenho dificuldade em transmitir&nbsp;esse&nbsp;posicionamento.</span></li>
-      <li class="rv from-r" style="--d:.24s"><i>04</i><span>Minha empresa está crescendo, mas minha identidade visual é improvisada e não acompanha a evolução&nbsp;do&nbsp;negócio.</span></li>
-      <li class="rv from-r" style="--d:.32s"><i>05</i><span>Quero uma marca sofisticada, que transmita confiança, mas não sei como traduzir&nbsp;isso&nbsp;visualmente.</span></li>
+      <li class="rv from-r"><i>I</i><span>Meu negócio cresceu, mas minha marca ainda não transmite o nível de profissionalismo que&nbsp;eu&nbsp;entrego.</span></li>
+      <li class="rv from-r" style="--d:.08s"><i>II</i><span>Olho para outras marcas do meu segmento e sinto que minha apresentação poderia ser&nbsp;muito&nbsp;melhor.</span></li>
+      <li class="rv from-r" style="--d:.16s"><i>III</i><span>Quero atrair clientes que valorizem meu trabalho, mas tenho dificuldade em transmitir&nbsp;esse&nbsp;posicionamento.</span></li>
+      <li class="rv from-r" style="--d:.24s"><i>IV</i><span>Minha empresa está crescendo, mas minha identidade visual é improvisada e não acompanha a evolução&nbsp;do&nbsp;negócio.</span></li>
+      <li class="rv from-r" style="--d:.32s"><i>V</i><span>Quero uma marca sofisticada, que transmita confiança, mas não sei como traduzir&nbsp;isso&nbsp;visualmente.</span></li>
       <li class="rv from-r" style="--d:.4s"><i>06</i><span>Minha marca é parecida com tantas outras do mercado. Quero uma identidade com personalidade&nbsp;e&nbsp;exclusividade.</span></li>
     </ol>
   </div>
@@ -352,10 +358,10 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
     <p class="rv" style="--d:.2s">O Estúdio Amave oferece soluções completas para marcas que desejam construir uma presença sólida, sofisticada e relevante em seus mercados. Nosso trabalho integra estratégia, identidade, comunicação e posicionamento, acompanhando cada marca desde a concepção até o fortalecimento da presença no&nbsp;ambiente&nbsp;digital.</p>
   </div>
   <div class="pilares">
-    <div class="pilar rv"><i>01</i><h3>Estratégia</h3><p>Direção criativa e estratégica em cada decisão&nbsp;da&nbsp;marca.</p></div>
-    <div class="pilar rv" style="--d:.1s"><i>02</i><h3>Identidade</h3><p>Uma identidade com personalidade, exclusividade e atenção&nbsp;aos&nbsp;detalhes.</p></div>
-    <div class="pilar rv" style="--d:.2s"><i>03</i><h3>Comunicação</h3><p>Uma linguagem refinada e contemporânea, que&nbsp;desperta&nbsp;desejo.</p></div>
-    <div class="pilar rv" style="--d:.3s"><i>04</i><h3>Posicionamento</h3><p>Valor percebido para atrair quem valoriza o&nbsp;seu&nbsp;trabalho.</p></div>
+    <div class="pilar rv"><i>I</i><h3>Estratégia</h3><p>Direção criativa e estratégica em cada decisão&nbsp;da&nbsp;marca.</p></div>
+    <div class="pilar rv" style="--d:.1s"><i>II</i><h3>Identidade</h3><p>Uma identidade com personalidade, exclusividade e atenção&nbsp;aos&nbsp;detalhes.</p></div>
+    <div class="pilar rv" style="--d:.2s"><i>III</i><h3>Comunicação</h3><p>Uma linguagem refinada e contemporânea, que&nbsp;desperta&nbsp;desejo.</p></div>
+    <div class="pilar rv" style="--d:.3s"><i>IV</i><h3>Posicionamento</h3><p>Valor percebido para atrair quem valoriza o&nbsp;seu&nbsp;trabalho.</p></div>
   </div>
 </section>
 
@@ -363,9 +369,9 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
   <p class="label rv">Como&nbsp;funciona</p>
   <h2 class="h2 rv" style="--d:.1s">Do primeiro contato ao <em>resultado&nbsp;final</em></h2>
   <div class="etapas">
-    <div class="etapa rv"><b>01</b><h3>Conversa&nbsp;inicial</h3><p>Cada projeto começa com uma conversa para compreender a história, os objetivos, as particularidades e o momento da&nbsp;sua&nbsp;marca.</p></div>
-    <div class="etapa rv" style="--d:.15s"><b>02</b><h3>Processo&nbsp;estruturado</h3><p>A partir desse primeiro contato, conduzimos você por um processo estruturado, com direção criativa e estratégica em&nbsp;cada&nbsp;etapa.</p></div>
-    <div class="etapa rv" style="--d:.3s"><b>03</b><h3>Marca com&nbsp;presença</h3><p>Integramos branding, comunicação e presença digital, da concepção ao fortalecimento da sua marca no&nbsp;ambiente&nbsp;digital.</p></div>
+    <div class="etapa rv"><b>I</b><h3>Conversa&nbsp;inicial</h3><p>Cada projeto começa com uma conversa para compreender a história, os objetivos, as particularidades e o momento da&nbsp;sua&nbsp;marca.</p></div>
+    <div class="etapa rv" style="--d:.15s"><b>II</b><h3>Processo&nbsp;estruturado</h3><p>A partir desse primeiro contato, conduzimos você por um processo estruturado, com direção criativa e estratégica em&nbsp;cada&nbsp;etapa.</p></div>
+    <div class="etapa rv" style="--d:.3s"><b>III</b><h3>Marca com&nbsp;presença</h3><p>Integramos branding, comunicação e presença digital, da concepção ao fortalecimento da sua marca no&nbsp;ambiente&nbsp;digital.</p></div>
   </div>
 </section>
 
@@ -373,11 +379,11 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
   <div class="two">
     <div><p class="label rv">Diferenciais</p><h2 class="h2 rv" style="--d:.1s">Por que escolher o Estúdio <em>Amave</em></h2></div>
     <ol class="lista">
-      <li class="rv from-r"><i>01</i><span>Mais de 5 anos de experiência no mercado&nbsp;criativo.</span></li>
-      <li class="rv from-r" style="--d:.07s"><i>02</i><span>Mais de 400 projetos&nbsp;desenvolvidos.</span></li>
-      <li class="rv from-r" style="--d:.14s"><i>03</i><span>Atuação em 32 estados brasileiros e 4&nbsp;países.</span></li>
-      <li class="rv from-r" style="--d:.21s"><i>04</i><span>Atendimento próximo, consultivo e&nbsp;personalizado.</span></li>
-      <li class="rv from-r" style="--d:.28s"><i>05</i><span>Direção criativa e estratégica em cada&nbsp;projeto.</span></li>
+      <li class="rv from-r"><i>I</i><span>Mais de 5 anos de experiência no mercado&nbsp;criativo.</span></li>
+      <li class="rv from-r" style="--d:.07s"><i>II</i><span>Mais de 400 projetos&nbsp;desenvolvidos.</span></li>
+      <li class="rv from-r" style="--d:.14s"><i>III</i><span>Atuação em 32 estados brasileiros e 4&nbsp;países.</span></li>
+      <li class="rv from-r" style="--d:.21s"><i>IV</i><span>Atendimento próximo, consultivo e&nbsp;personalizado.</span></li>
+      <li class="rv from-r" style="--d:.28s"><i>V</i><span>Direção criativa e estratégica em cada&nbsp;projeto.</span></li>
       <li class="rv from-r" style="--d:.35s"><i>06</i><span>Integração entre branding, comunicação e&nbsp;presença&nbsp;digital.</span></li>
       <li class="rv from-r" style="--d:.42s"><i>07</i><span>Compromisso com qualidade, exclusividade e atenção&nbsp;aos&nbsp;detalhes.</span></li>
     </ol>
@@ -388,22 +394,22 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
   <p class="label rv">Feedback</p>
   <h2 class="h2 rv" style="--d:.1s">O que nossos clientes <em>falam</em><span class="sm">sobre&nbsp;a&nbsp;Amave</span></h2>
   <div class="prints">
-    <div class="print rv zoom"><span class="label">Print de WhatsApp&nbsp;1</span><small>Substituir pelo print enviado pelo cliente</small></div>
-    <div class="print rv zoom" style="--d:.1s"><span class="label">Print de WhatsApp&nbsp;2</span><small>Substituir pelo print enviado pelo cliente</small></div>
-    <div class="print rv zoom" style="--d:.2s"><span class="label">Print de WhatsApp&nbsp;3</span><small>Substituir pelo print enviado pelo cliente</small></div>
-    <div class="print rv zoom" style="--d:.3s"><span class="label">Print de WhatsApp&nbsp;4</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom"><span class="label">Print de WhatsApp&nbsp;1</span><small>Substituir pelo print enviado pelo&nbsp;cliente</small></div>
+    <div class="print rv zoom" style="--d:.1s"><span class="label">Print de WhatsApp&nbsp;2</span><small>Substituir pelo print enviado pelo&nbsp;cliente</small></div>
+    <div class="print rv zoom" style="--d:.2s"><span class="label">Print de WhatsApp&nbsp;3</span><small>Substituir pelo print enviado pelo&nbsp;cliente</small></div>
+    <div class="print rv zoom" style="--d:.3s"><span class="label">Print de WhatsApp&nbsp;4</span><small>Substituir pelo print enviado pelo&nbsp;cliente</small></div>
   </div>
 </section>
 
 <section class="sec quem">
   <div class="quem__grid">
     <div class="quem__img rv from-l">
-      <div class="print quem__ph"><span class="label">Foto do&nbsp;fundador</span><small>Substituir pela foto enviada pelo cliente</small></div>
+      <div class="print quem__ph"><span class="label">Foto do&nbsp;fundador</span><small>Substituir pela foto enviada pelo&nbsp;cliente</small></div>
       <img class="quem__sym" src="img/simbolo.webp" alt="" aria-hidden="true" width="96" height="96">
     </div>
     <div class="quem__txt">
       <p class="label rv">Quem está por trás da&nbsp;Amave</p>
-      <h2 class="h2 rv" style="--d:.1s">Nome do fundador, <em>direção criativa</em><span class="sm">e&nbsp;estratégia</span></h2>
+      <h2 class="h2 rv" style="--d:.1s">Nome do fundador, <em>direção&nbsp;criativa</em><span class="sm">e&nbsp;estratégia</span></h2>
       <p class="rv" style="--d:.2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea&nbsp;commodo&nbsp;consequat.</p>
       <p class="rv" style="--d:.3s">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id&nbsp;est&nbsp;laborum.</p>
       <div class="rv" style="--d:.4s"><a class="btn" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Conversar com o estúdio<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a></div>
@@ -425,7 +431,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
   <div class="stripes stripes--cta flip rv" aria-hidden="true"><span class="stripe" style="--x:0px;--w:22px;--xm:4.37%;--wm:14px;opacity:0.55;transition-delay:0.15s"></span><span class="stripe" style="--x:68px;--w:16px;--xm:16.99%;--wm:20px;opacity:0.92;transition-delay:0.22s"></span><span class="stripe" style="--x:143px;--w:30px;--xm:31.07%;--wm:12px;opacity:0.89;transition-delay:0.29s"></span><span class="stripe" style="--x:245px;--w:18px;--xm:47.57%;--wm:18px;opacity:0.86;transition-delay:0.36s"></span><span class="stripe" style="--x:320px;--w:26px;--xm:61.17%;--wm:14px;opacity:0.83;transition-delay:0.43s"></span><span class="stripe" style="--x:416px;--w:14px;--xm:75.24%;--wm:20px;opacity:0.8;transition-delay:0.50s"></span><span class="stripe" style="--x:485px;--w:28px;--xm:88.83%;--wm:16px;opacity:0.77;transition-delay:0.57s"></span><span class="stripe" style="--x:581px;--w:20px;--xm:-100px;--wm:0px;opacity:0.74;transition-delay:0.64s"></span><span class="stripe" style="--x:654px;--w:24px;--xm:-100px;--wm:0px;opacity:0.71;transition-delay:0.71s"></span></div>
   <div class="cta__glow"></div>
   <p class="label rv">Estúdio&nbsp;Amave</p>
-  <h2 class="rv" style="--d:.1s">Prontos para passar para o próximo&nbsp;nível? <em>Seja cliente Amave!</em></h2>
+  <h2 class="rv" style="--d:.1s">Prontos para passar para o próximo&nbsp;nível? <em>Seja&nbsp;cliente&nbsp;Amave!</em></h2>
   <p class="rv" style="--d:.2s">Chame no WhatsApp e conte a história da sua marca. Atendimento próximo, consultivo&nbsp;e&nbsp;personalizado.</p>
   <div class="rv" style="--d:.3s"><a class="btn btn--claro" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Chamar no WhatsApp<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a></div>
 </section>
@@ -447,7 +453,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
     </div>
   </div>
   <hr>
-  <small>© 2026 Estúdio Amave. Todos os direitos reservados.</small>
+  <small>© 2026 Estúdio Amave. Todos os direitos&nbsp;reservados.</small>
 </footer>
 
 <script src="js/lenis.min.js"></script>
