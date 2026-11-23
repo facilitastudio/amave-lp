@@ -170,6 +170,10 @@ a{color:inherit;text-decoration:none}
 
 /* cta final */
 .cta{background:var(--marrom);color:var(--creme);padding:244px var(--pad);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+.cta>*{position:relative;z-index:1}.cta>.stripes--cta{position:absolute;z-index:0;inset:0}
+.cta .stripe{background:linear-gradient(180deg,rgba(242,236,232,.16),rgba(242,236,232,.07))}
+.cta .stripes--cta.rv{transform:none}.cta .stripes--cta.flip.rv{transform:scaleX(-1)}.cta .stripes--cta.in .stripe{transform:scaleY(1)}
+.cta>.cta__glow{position:absolute;z-index:0}
 .cta .label{color:var(--bege)}
 .cta h2{font-family:var(--serif);font-weight:300;font-size:clamp(44px,3.6vw + 10px,72px);letter-spacing:-.03em;line-height:1.04;margin:32px 0}
 .cta h2 em{font-style:italic}
@@ -395,6 +399,8 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 </section>
 
 <section class="cta">
+  <div class="stripes stripes--cta rv" aria-hidden="true"><span class="stripe" style="--x:0px;--w:22px;--xm:4.37%;--wm:14px;opacity:0.55;transition-delay:0.15s"></span><span class="stripe" style="--x:68px;--w:16px;--xm:16.99%;--wm:20px;opacity:0.92;transition-delay:0.22s"></span><span class="stripe" style="--x:143px;--w:30px;--xm:31.07%;--wm:12px;opacity:0.89;transition-delay:0.29s"></span><span class="stripe" style="--x:245px;--w:18px;--xm:47.57%;--wm:18px;opacity:0.86;transition-delay:0.36s"></span><span class="stripe" style="--x:320px;--w:26px;--xm:61.17%;--wm:14px;opacity:0.83;transition-delay:0.43s"></span><span class="stripe" style="--x:416px;--w:14px;--xm:75.24%;--wm:20px;opacity:0.8;transition-delay:0.50s"></span><span class="stripe" style="--x:485px;--w:28px;--xm:88.83%;--wm:16px;opacity:0.77;transition-delay:0.57s"></span><span class="stripe" style="--x:581px;--w:20px;--xm:-100px;--wm:0px;opacity:0.74;transition-delay:0.64s"></span><span class="stripe" style="--x:654px;--w:24px;--xm:-100px;--wm:0px;opacity:0.71;transition-delay:0.71s"></span></div>
+  <div class="stripes stripes--cta flip rv" aria-hidden="true"><span class="stripe" style="--x:0px;--w:22px;--xm:4.37%;--wm:14px;opacity:0.55;transition-delay:0.15s"></span><span class="stripe" style="--x:68px;--w:16px;--xm:16.99%;--wm:20px;opacity:0.92;transition-delay:0.22s"></span><span class="stripe" style="--x:143px;--w:30px;--xm:31.07%;--wm:12px;opacity:0.89;transition-delay:0.29s"></span><span class="stripe" style="--x:245px;--w:18px;--xm:47.57%;--wm:18px;opacity:0.86;transition-delay:0.36s"></span><span class="stripe" style="--x:320px;--w:26px;--xm:61.17%;--wm:14px;opacity:0.83;transition-delay:0.43s"></span><span class="stripe" style="--x:416px;--w:14px;--xm:75.24%;--wm:20px;opacity:0.8;transition-delay:0.50s"></span><span class="stripe" style="--x:485px;--w:28px;--xm:88.83%;--wm:16px;opacity:0.77;transition-delay:0.57s"></span><span class="stripe" style="--x:581px;--w:20px;--xm:-100px;--wm:0px;opacity:0.74;transition-delay:0.64s"></span><span class="stripe" style="--x:654px;--w:24px;--xm:-100px;--wm:0px;opacity:0.71;transition-delay:0.71s"></span></div>
   <div class="cta__glow"></div>
   <p class="label rv">Estúdio&nbsp;Amave</p>
   <h2 class="rv" style="--d:.1s">Prontos para passar<br>para o próximo nível?<br><em>Seja cliente Amave!</em></h2>
