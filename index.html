@@ -57,6 +57,7 @@ a{color:inherit;text-decoration:none}
 .header .logo{width:179px;color:var(--carvao);transition:width .5s var(--ease)}
 .header.scrolled{height:84px;background:rgba(242,236,232,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(51,51,51,.08)}
 .header.scrolled .logo{width:140px}
+.header .t-short{display:none}
 
 /* hero */
 .hero{position:relative;min-height:960px;padding:0 var(--pad);display:flex;align-items:center;overflow:hidden}
@@ -171,7 +172,7 @@ a{color:inherit;text-decoration:none}
 /* cta final */
 .cta{background:var(--marrom);color:var(--creme);padding:244px var(--pad);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
 .cta>*{position:relative;z-index:1}.cta>.stripes--cta{position:absolute;z-index:0;inset:0}
-.cta .stripe{background:linear-gradient(180deg,rgba(242,236,232,.16),rgba(242,236,232,.07))}
+.cta .stripe{background:linear-gradient(180deg,rgba(242,236,232,.08),rgba(242,236,232,.035))}
 .cta .stripes--cta.rv{transform:none}.cta .stripes--cta.flip.rv{transform:scaleX(-1)}.cta .stripes--cta.in .stripe{transform:scaleY(1)}
 .cta>.cta__glow{position:absolute;z-index:0}
 .cta .label{color:var(--bege)}
@@ -226,11 +227,14 @@ a{color:inherit;text-decoration:none}
   body{font-size:16px}
   .header{height:84px}
   .header .logo{width:130px}
-  .header .btn{display:none}
+  .header .btn{height:46px;padding:4px 4px 4px 20px;gap:12px;font-size:15px}
+  .header .btn .ic{width:36px;height:36px}
+  .header .t-full{display:none}
+  .header .t-short{display:inline}
   .header.scrolled{height:68px}.header.scrolled .logo{width:116px}
   .hero{padding-top:99px}
   .hero__txt{padding-top:0}
-  .hero h1{font-size:46px;margin:22px 0 26px}
+  .hero h1{font-size:min(46px,calc((100vw - 48px)/9.1));margin:22px 0 26px}
   .script{font-size:70px;left:-18px;top:-14px}
   .hero__sub{font-size:17px}
   .hero .btn,.res .btn,.cta .btn{width:100%;justify-content:space-between}
@@ -273,7 +277,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M30.6802 28.3885C28.5921 29.2237 26.6607 30.2747 24.8862 31.5412V33.5209C26.8277 31.9599 28.9959 30.6965 31.3909 29.7308C34.6547 28.4148 38.1817 27.7568 41.972 27.7568C45.7623 27.7568 49.2892 28.4148 52.553 29.7308C53.6819 30.186 54.7604 30.7073 55.7885 31.2948L56.2322 29.8027C55.2605 29.2774 54.2447 28.806 53.1848 28.3885C49.763 26.9671 46.0254 26.2565 41.972 26.2565C37.9186 26.2565 34.1546 26.9671 30.6802 28.3885Z"/>
 </svg>
 </a>
-  <a class="btn btn--contorno" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Chamar no WhatsApp<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a>
+  <a class="btn btn--contorno" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener"><span class="t-full">Chamar no&nbsp;WhatsApp</span><span class="t-short">WhatsApp</span><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a>
 </header>
 
 <main>
