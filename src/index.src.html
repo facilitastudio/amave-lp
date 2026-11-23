@@ -135,9 +135,9 @@ a{color:inherit;text-decoration:none}
 /* quem esta por tras */
 .quem__grid{display:grid;grid-template-columns:5fr 6fr;gap:96px;align-items:center;max-width:1140px;margin:0 auto}
 .quem__img{position:relative}
-.quem__img img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.quem .quem__ph{aspect-ratio:4/5;width:100%}.quem .quem__ph:hover{transform:none;box-shadow:none}
 .quem__sym{position:absolute;top:-36px;right:-36px;width:96px;height:96px;color:var(--marrom);animation:gira 28s linear infinite}
-.quem__sym svg{width:100%;height:100%;display:block}
+.quem__sym{object-fit:contain}
 @keyframes gira{to{transform:rotate(360deg)}}
 .quem__txt .h2{margin:24px 0 28px}
 .quem__txt p:not(.label){font-size:18px;color:rgba(51,51,51,.85);margin-bottom:20px;max-width:540px}
@@ -364,8 +364,8 @@ a{color:inherit;text-decoration:none}
 <section class="sec quem">
   <div class="quem__grid">
     <div class="quem__img rv from-l">
-      <img src="img/fundadora.webp" alt="Retrato do fundador do Estúdio Amave" width="1100" height="1375" loading="lazy">
-      <span class="quem__sym" aria-hidden="true">{{SYM}}</span>
+      <div class="print quem__ph"><span class="label">Foto do fundador</span><small>Substituir pela foto enviada pelo cliente</small></div>
+      <img class="quem__sym" src="img/simbolo.webp" alt="" aria-hidden="true" width="96" height="96">
     </div>
     <div class="quem__txt">
       <p class="label rv">Quem está por trás da Amave</p>
