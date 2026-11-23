@@ -150,6 +150,11 @@ html{scroll-behavior:smooth}
 
 
 .two>div,.oq__top>div{min-width:0}.h2 .b{display:block;white-space:nowrap}.h2 .b em{display:inline;font-size:1.3em}.h2 em{white-space:nowrap}
+.h2 .sm{white-space:nowrap}
+.hero__txt>.label,.sec .label,.cta>.label{display:inline-block;position:relative;padding-bottom:7px}
+.hero__txt>.label::after,.sec .label::after,.cta>.label::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform 2.6s cubic-bezier(.45,.05,.25,1) .35s}
+.hero__txt>.label.in::after,.sec .label.in::after,.cta>.label.in::after{transform:scaleX(1)}
+.print .label{padding-bottom:0}.print .label::after{display:none}
 /* escrita nas palavras italicas */
 .h2 em,.cta h2 em,.hero h1 .l2 em{clip-path:inset(-.25em 100% -.25em -.15em);transition:clip-path 1.7s cubic-bezier(.6,.05,.2,1) .35s}
 .h2.in em,.cta h2.in em,.loaded .hero h1 .l2 em{clip-path:inset(-.25em -.15em -.25em -.15em)}
@@ -285,6 +290,7 @@ html{scroll-behavior:smooth}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .quem__sym{animation:none!important}
   .rv,.card,.stripe,.hero h1 .ln>span,.h2 em,.cta h2 em,.hero h1 .l2 em{clip-path:none!important}
+  .label::after{transform:scaleX(1)!important}
   .script,.h2 .script{opacity:1!important;transform:none!important;clip-path:none!important}
 }
 </style>
@@ -402,7 +408,7 @@ html{scroll-behavior:smooth}
     </div>
     <div class="quem__txt">
       <p class="label rv">Quem está por trás da Amave</p>
-      <h2 class="h2 rv" style="--d:.1s">Nome do fundador, <em>direção criativa</em><span class="sm">e&nbsp;estratégia</span></h2>
+      <h2 class="h2 rv" style="--d:.1s"><span class="b">Nome do fundador,</span><em>direção criativa</em><span class="sm">e&nbsp;estratégia</span></h2>
       <p class="rv" style="--d:.2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&nbsp;consequat.</p>
       <p class="rv" style="--d:.3s">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est&nbsp;laborum.</p>
       <div class="rv" style="--d:.4s"><a class="btn" href="{{WA}}" target="_blank" rel="noopener">Entrar em contato agora mesmo<span class="ic">{{ARROW}}</span></a></div>
@@ -458,7 +464,8 @@ html{scroll-behavior:smooth}
   d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
   function fit(){d.querySelectorAll('.h2').forEach(function(h){if(!h.querySelector('.b'))return;h.style.fontSize='';var fs=parseFloat(getComputedStyle(h).fontSize),av=h.clientWidth,mx=0;
     h.querySelectorAll('.b,em').forEach(function(x){if(x.closest('.b')&&x.tagName=='EM')return;var r=document.createRange();r.selectNodeContents(x);mx=Math.max(mx,r.getBoundingClientRect().width)});
-    if(mx>av)h.style.fontSize=(fs*av/mx*.98).toFixed(2)+'px'})}
+    if(mx>av)h.style.fontSize=(fs*av/mx*.98).toFixed(2)+'px';
+    var sm=h.querySelector('.sm'),b1=h.querySelector('.b');if(sm&&b1){sm.style.fontSize='';var f0=parseFloat(getComputedStyle(sm).fontSize);var r1=d.createRange();r1.selectNodeContents(b1);var r2=d.createRange();r2.selectNodeContents(sm);var w1=r1.getBoundingClientRect().width,w2=r2.getBoundingClientRect().width;if(w2>0)sm.style.fontSize=Math.min(f0*w1/w2,parseFloat(getComputedStyle(h).fontSize)).toFixed(2)+'px'}})}
   (d.fonts&&d.fonts.ready?d.fonts.ready:Promise.resolve()).then(fit);addEventListener('resize',fit);fit();
   var hero=d.querySelector('.hero');
   new IntersectionObserver(function(es){es.forEach(function(e){d.documentElement.classList.toggle('loaded',e.isIntersecting)})},{threshold:0}).observe(hero);
