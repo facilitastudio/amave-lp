@@ -63,10 +63,12 @@ a{color:inherit;text-decoration:none}
 /* hero */
 .hero{position:relative;min-height:960px;padding:0 var(--pad);display:flex;align-items:center;overflow:hidden}
 .hero__txt{position:relative;z-index:3;max-width:640px;padding-top:40px}
-.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(44px,2.6vw + 22px,66px);letter-spacing:-.03em;line-height:1.04;margin:30px 0 34px;position:relative}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(52px,2vw + 36px,74px);letter-spacing:-.03em;line-height:1.04;margin:30px 0 34px;position:relative}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .ln>span{display:inline-block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
 .loaded .hero h1 .ln>span{transform:none}
+.hero h1 .l2{line-height:1;margin-top:-.04em}.hero h1 .l2 em{font-style:italic;font-size:1.75em;letter-spacing:-.04em;display:inline-block;padding-right:.08em}
+.hero h1 .l3{font-size:.5em;letter-spacing:-.02em;line-height:1.2;margin-top:.5em}
 .loaded .hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
 .loaded .hero h1 .ln:nth-child(3)>span{transition-delay:.24s}
 .script{position:absolute;left:-26px;top:-18px;font-family:var(--script);font-size:96px;line-height:1;color:var(--marrom);opacity:0;pointer-events:none;letter-spacing:0;clip-path:inset(0 100% 0 0);transition:clip-path 1.6s var(--ease) .7s,opacity .6s .7s}
@@ -235,7 +237,7 @@ a{color:inherit;text-decoration:none}
   .header.scrolled{height:68px}.header.scrolled .logo{width:116px}
   .hero{padding-top:99px}
   .hero__txt{padding-top:0}
-  .hero h1{font-size:min(46px,calc((100vw - 48px)/9.1));margin:22px 0 26px}
+  .hero h1{font-size:min(60px,calc((100vw - 48px)/6.5));margin:22px 0 26px}
   .script{font-size:70px;left:-18px;top:-14px}
   .hero__sub{font-size:17px}
   .hero .btn,.res .btn,.cta .btn{width:100%;justify-content:space-between}
@@ -285,7 +287,7 @@ h1,h2,h3,h4,summary{text-wrap:balance}p,li{text-wrap:pretty}</style>
 <section class="hero">
   <div class="hero__txt">
     <p class="label rv">Estúdio boutique de&nbsp;branding</p>
-    <h1><span class="script" aria-hidden="true">S</span><span class="ln"><span>Sua marca&nbsp;com</span></span><span class="ln"><span>presença,&nbsp;personalidade</span></span><span class="ln"><span>e valor&nbsp;percebido.</span></span></h1>
+    <h1><span class="script" aria-hidden="true">S</span><span class="ln"><span>Sua marca&nbsp;com</span></span><span class="ln l2"><span><em>presença,</em></span></span><span class="ln l3"><span>personalidade&nbsp;e&nbsp;valor&nbsp;percebido.</span></span></h1>
     <p class="hero__sub rv" style="--d:.35s">Identidade visual com estratégia e personalidade, para marcas que não querem disputar atenção pelo&nbsp;menor&nbsp;preço.</p>
     <div class="rv" style="--d:.5s"><a class="btn" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Chamar no WhatsApp<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a></div>
   </div>
