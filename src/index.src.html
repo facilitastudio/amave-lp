@@ -493,7 +493,7 @@ html{scroll-behavior:smooth}
         var a=e.animate([{transform:'scale(.3)',opacity:op},{transform:'scale('+sc+')',opacity:0}],{duration:dur,easing:'cubic-bezier(.2,.7,.2,1)'});a.onfinish=function(){e.remove()}}
       mk(10,1.2,520,1,0);mk(44,1,800,.9,1.5)})}
   // scroll suave
-  if(!mq&&window.Lenis){var lenis=new Lenis({lerp:.085,smoothWheel:true,anchors:true,syncTouch:true,syncTouchLerp:.09,touchInertiaMultiplier:28});function raf(t){lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf);
+  if(!mq&&window.Lenis){var lenis=new Lenis({lerp:.085,smoothWheel:true,anchors:true});function raf(t){lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf);
     d.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var id=a.getAttribute('href');var el=id.length>1?d.querySelector(id):null;ev.preventDefault();lenis.scrollTo(el||0,{duration:1.4})})})}
   // faq
   d.querySelectorAll('.qa button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentNode,o=q.classList.toggle('open');b.setAttribute('aria-expanded',o)})});
