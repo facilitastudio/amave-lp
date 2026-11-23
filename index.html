@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estúdio Amave | Branding e identidade visual</title>
+<meta name="description" content="Estúdio boutique de branding em Itapuranga, Goiás. Identidade visual com estratégia e personalidade, para marcas com presença e valor percebido.">
+<meta name="theme-color" content="#F2ECE8">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Estúdio Amave | Branding e identidade visual">
+<meta property="og:description" content="Sua marca com presença, personalidade e valor percebido.">
+<meta property="og:image" content="https://facilitastudio.github.io/amave-lp/img/og.jpg">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="fonts/newsreader-latin-opsz-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/jost-latin-300-normal.woff2" crossorigin>
+<link rel="preload" as="image" href="img/mockup.webp">
+<style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/newsreader-latin-opsz-normal.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:200 800;font-display:swap;src:url(fonts/newsreader-latin-opsz-italic.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-style:normal;font-weight:300;font-display:swap;src:url(fonts/jost-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/jost-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Mrs Saint Delafield";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/mrs-saint-delafield-latin-400-normal.woff2) format("woff2")}
+:root{
+  --carvao:#333333;--bege:#E3E2D5;--marrom:#875E42;--creme:#F2ECE8;
+  --serif:"Newsreader",Georgia,serif;--sans:"Jost",system-ui,sans-serif;--script:"Mrs Saint Delafield",cursive;
+  --pad:max(24px,calc((100vw - 1140px)/2));
+  --ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--creme);color:var(--carvao);font-family:var(--sans);font-weight:300;font-size:18px;line-height:1.5;letter-spacing:-.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.label{font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--marrom)}
+.serif{font-family:var(--serif);font-weight:300;letter-spacing:-.03em;line-height:1.06}
+.h2{font-family:var(--serif);font-weight:300;letter-spacing:-.03em;line-height:1.06;font-size:clamp(38px,3.2vw + 10px,56px)}
+.sec{padding:150px var(--pad)}
+.nb{white-space:nowrap}
+
+/* botões */
+.btn{--bg:var(--marrom);--fg:var(--creme);--cbg:var(--creme);--cfg:var(--marrom);--bd:transparent;
+  position:relative;display:inline-flex;align-items:center;gap:18px;height:56px;padding:8px 8px 8px 30px;border-radius:999px;
+  background:var(--bg);color:var(--fg);border:1px solid var(--bd);font-family:var(--sans);font-weight:400;font-size:16px;letter-spacing:-.01em;
+  overflow:hidden;isolation:isolate;transition:transform .5s var(--ease),box-shadow .5s var(--ease);white-space:nowrap}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease)}
+.btn:hover::before{transform:translateX(120%)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(51,51,51,.45)}
+.btn .ic{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--cbg);color:var(--cfg);border:1px solid var(--bd);overflow:hidden;flex:none}
+.btn .ic svg{width:16px;height:16px;transition:transform .5s var(--ease)}
+.btn:hover .ic svg{animation:seta .6s var(--ease)}
+@keyframes seta{0%{transform:translateX(0)}45%{transform:translateX(24px)}46%{transform:translateX(-24px)}100%{transform:translateX(0)}}
+.btn--contorno{--bg:transparent;--fg:var(--marrom);--cbg:transparent;--cfg:var(--marrom);--bd:var(--marrom)}
+.btn--claro{--bg:var(--creme);--fg:var(--marrom);--cbg:var(--marrom);--cfg:var(--creme)}
+
+/* header */
+.header{position:fixed;inset:0 0 auto 0;z-index:50;height:128px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;transition:height .5s var(--ease),background .5s,box-shadow .5s}
+.header .logo{width:179px;color:var(--carvao);transition:width .5s var(--ease)}
+.header.scrolled{height:84px;background:rgba(242,236,232,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(51,51,51,.08)}
+.header.scrolled .logo{width:140px}
+
+/* hero */
+.hero{position:relative;min-height:960px;padding:0 var(--pad);display:flex;align-items:center;overflow:hidden}
+.hero__txt{position:relative;z-index:3;max-width:640px;padding-top:40px}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(44px,2.6vw + 22px,66px);letter-spacing:-.03em;line-height:1.04;margin:30px 0 34px;position:relative}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
+.loaded .hero h1 .ln>span{transform:none}
+.loaded .hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
+.loaded .hero h1 .ln:nth-child(3)>span{transition-delay:.24s}
+.script{position:absolute;left:-26px;top:-18px;font-family:var(--script);font-size:96px;line-height:1;color:var(--marrom);opacity:0;pointer-events:none;letter-spacing:0;clip-path:inset(0 100% 0 0);transition:clip-path 1.6s var(--ease) .7s,opacity .6s .7s}
+.loaded .script{opacity:.85;clip-path:inset(0 0 0 0)}
+.hero__sub{font-size:19px;max-width:468px;color:rgba(51,51,51,.85);margin-bottom:40px}
+.hero__vis{position:absolute;top:0;bottom:0;right:0;left:min(calc(var(--pad) + 770px), calc(100vw - 554px));z-index:1}
+.stripes{position:absolute;inset:128px 0 0 0;overflow:hidden}
+.stripe{position:absolute;left:var(--x);width:var(--w);top:-40px;bottom:-40px;border-radius:2px;background:linear-gradient(180deg,rgba(135,94,66,.92),rgba(135,94,66,.72));transform:scaleY(0);transform-origin:top;transition:transform 1.4s var(--ease)}
+.loaded .stripe{transform:scaleY(1)}
+.card{position:absolute;left:30px;top:170px;width:500px;height:620px;background:var(--bege);box-shadow:0 30px 60px -20px rgba(51,51,51,.35),0 10px 20px -10px rgba(51,51,51,.2);
+  opacity:0;transform:translateY(60px) rotate(-2deg);transition:opacity 1.1s var(--ease) .5s,transform 1.4s var(--ease) .5s;z-index:2}
+.loaded .card{opacity:1;transform:none}
+.card::before{content:"";position:absolute;inset:16px;border:3px dashed var(--creme);border-radius:4px;pointer-events:none}
+.card__img{position:absolute;left:48px;top:92px;width:404px;height:344px;animation:flutua 6s ease-in-out infinite}
+@keyframes flutua{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(-.6deg)}}
+.card__cap{position:absolute;left:48px;right:48px;top:490px;text-align:center}
+.card__cap .label{font-size:12px;letter-spacing:.08em;display:block;margin-bottom:12px}
+.card__cap em{font-family:var(--serif);font-style:italic;font-weight:300;font-size:28px;letter-spacing:-.03em}
+
+/* números */
+.nums{background:var(--marrom);color:var(--creme);padding:76px var(--pad);display:grid;grid-template-columns:240px 240px 240px 1fr;gap:40px}
+.num b{display:block;font-family:var(--serif);font-weight:300;font-size:68px;line-height:1;letter-spacing:-.03em}
+.num span{display:block;margin-top:10px;font-size:16px;color:var(--bege)}
+
+/* identificação / diferenciais (duas colunas) */
+.two{display:grid;grid-template-columns:400px 1fr;gap:110px;align-items:start}
+.two__head .h2{margin:24px 0 28px}
+.two__head p{font-size:18px;color:rgba(51,51,51,.8);max-width:297px}
+.lista{list-style:none}
+.lista li{display:flex;gap:28px;padding:26px 0;border-top:1px solid rgba(51,51,51,.22);font-size:20px;line-height:1.5;position:relative}
+.lista li:last-child{border-bottom:1px solid rgba(51,51,51,.22)}
+.lista li i{font-style:normal;font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--marrom);width:34px;flex:none;padding-top:5px}
+.lista li span{transition:transform .5s var(--ease)}
+.lista li:hover span{transform:translateX(8px)}
+.dif{background:var(--marrom);color:var(--creme)}
+.dif .label{color:var(--bege)}
+.dif .lista li{border-color:rgba(242,236,232,.3);padding:24px 0}
+.dif .lista li i{color:var(--bege)}
+.dif .h2{margin-top:24px}
+
+/* resultado */
+.res{background:var(--bege);padding:170px var(--pad);text-align:center;display:flex;flex-direction:column;align-items:center;gap:40px}
+.res blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(30px,2vw + 14px,50px);letter-spacing:-.03em;line-height:1.18;max-width:980px}
+.res p{font-size:20px;color:rgba(51,51,51,.85)}
+
+/* o que fazemos */
+.oq__top{display:grid;grid-template-columns:480px 1fr;gap:110px;margin-bottom:90px}
+.oq__top .h2{margin-top:24px}
+.oq__top p{font-size:20px;line-height:1.6;color:rgba(51,51,51,.9)}
+.pilares{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.pilar{padding-top:26px;position:relative}
+.pilar::before,.etapa::before{content:"";position:absolute;left:0;top:0;height:1px;width:100%;background:var(--marrom);transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease) var(--d,0s)}
+.in.pilar::before,.in.etapa::before{transform:scaleX(1)}
+.pilar i{font-style:normal;font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--marrom)}
+.pilar h3{font-family:var(--serif);font-weight:300;font-size:32px;letter-spacing:-.03em;line-height:1.1;margin:14px 0}
+.pilar p{font-size:17px;color:rgba(51,51,51,.8)}
+
+/* processo */
+.proc{background:var(--bege)}
+.proc .h2{margin:24px 0 80px}
+.etapas{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.etapa{position:relative;padding-top:30px}
+.etapa b{display:block;font-family:var(--serif);font-weight:300;font-size:60px;line-height:1;color:rgba(135,94,66,.9);letter-spacing:-.03em}
+.etapa h3{font-family:var(--serif);font-weight:300;font-size:32px;letter-spacing:-.03em;margin:18px 0}
+.etapa p{font-size:18px;color:rgba(51,51,51,.85)}
+
+/* depoimentos */
+.dep .h2{margin:24px 0 64px}
+.prints{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.print{aspect-ratio:261/540;background:var(--bege);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.print:hover{transform:translateY(-10px) rotate(-1deg);box-shadow:0 30px 50px -25px rgba(51,51,51,.4)}
+.print .label{font-size:12px;margin-bottom:10px}
+.print small{font-size:14px;color:rgba(51,51,51,.6);max-width:200px}
+
+/* dúvidas */
+.faq{background:var(--bege)}
+.faq .two{grid-template-columns:406px 1fr}
+.faq .h2{margin-top:24px}
+.qa{border-top:1px solid rgba(51,51,51,.25)}
+.qa:last-child{border-bottom:1px solid rgba(51,51,51,.25)}
+.qa button{all:unset;cursor:pointer;display:flex;justify-content:space-between;gap:24px;width:100%;padding:28px 0 14px;font-family:var(--serif);font-weight:300;font-size:28px;line-height:1.15;letter-spacing:-.02em}
+.qa button:focus-visible{outline:2px solid var(--marrom);outline-offset:4px}
+.qa .sinal{position:relative;width:21px;height:21px;flex:none;margin-top:10px}
+.qa .sinal::before,.qa .sinal::after{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:var(--marrom);transition:transform .5s var(--ease)}
+.qa .sinal::after{transform:rotate(90deg)}
+.qa.open .sinal::after{transform:rotate(0)}
+.qa .resp{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.qa.open .resp{grid-template-rows:1fr}
+.qa .resp>div{overflow:hidden}
+.qa .resp p{font-size:18px;color:rgba(51,51,51,.85);padding-bottom:30px}
+
+/* cta final */
+.cta{background:var(--marrom);color:var(--creme);padding:244px var(--pad);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+.cta .label{color:var(--bege)}
+.cta h2{font-family:var(--serif);font-weight:300;font-size:clamp(44px,3.6vw + 10px,72px);letter-spacing:-.03em;line-height:1.04;margin:32px 0}
+.cta h2 em{font-style:italic}
+.cta p{font-size:20px;max-width:640px;color:rgba(242,236,232,.9);margin-bottom:32px}
+.cta__glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(242,236,232,.12),transparent 60%);left:50%;top:50%;transform:translate(-50%,-50%);animation:respira 8s ease-in-out infinite;pointer-events:none}
+@keyframes respira{0%,100%{transform:translate(-50%,-50%) scale(.85);opacity:.6}50%{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
+
+/* rodapé */
+.rodape{background:var(--carvao);color:var(--bege);padding:90px var(--pad) 56px}
+.rodape__top{display:flex;justify-content:space-between;gap:40px;align-items:flex-start}
+.rodape .logo{width:251px;color:var(--bege)}
+.rodape__info{width:320px;display:flex;flex-direction:column;gap:10px;font-size:18px}
+.rodape__info span:not(:first-child){color:rgba(227,226,213,.8)}
+.rodape__info a:hover{color:var(--creme)}
+.rodape hr{border:0;height:1px;background:rgba(227,226,213,.25);margin:64px 0}
+.rodape small{font-size:14px;color:rgba(227,226,213,.6)}
+
+/* animações de entrada */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease) var(--d,0s),transform 1.1s var(--ease) var(--d,0s)}
+.rv.from-l{transform:translateX(-50px)}
+.rv.from-r{transform:translateX(50px)}
+.rv.zoom{transform:scale(.94)}
+.rv.in{opacity:1;transform:none}
+.hero .rv{transition-delay:calc(var(--d,0s) + .2s)}
+
+/* mobile */
+@media (max-width:1240px){
+  .stripe{left:var(--xm);width:var(--wm)}
+  .hero__vis{left:auto;right:auto;top:auto;bottom:auto}
+  .stripes{inset:0}
+  .hero{flex-direction:column;align-items:stretch;min-height:0;padding-top:118px}
+  .hero__vis{position:relative;inset:auto;width:auto;min-width:0;height:560px;margin:56px calc(-1*var(--pad)) 0}
+  .card{left:50%;margin-left:-152px;top:60px;width:304px;height:420px}
+  .card::before{inset:12px}
+  .card__img{left:24px;top:64px;width:256px;height:218px}
+  .card__cap{left:24px;right:24px;top:312px}
+  .card__cap .label{font-size:10px}
+  .card__cap em{font-size:24px}
+  .nums{grid-template-columns:1fr 1fr;gap:36px 24px;padding:56px var(--pad)}
+  .num b{font-size:52px}.num span{font-size:15px;line-height:1.4}
+  .two,.faq .two,.oq__top{grid-template-columns:1fr;gap:40px}
+  .pilares,.etapas{grid-template-columns:1fr;gap:0}
+  .pilar,.etapa{padding:22px 0}
+  .prints{grid-template-columns:1fr 1fr;gap:16px}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .header{height:84px}
+  .header .logo{width:130px}
+  .header .btn{display:none}
+  .header.scrolled{height:68px}.header.scrolled .logo{width:116px}
+  .hero h1{font-size:46px;margin:22px 0 26px}
+  .script{font-size:70px;left:-18px;top:-14px}
+  .hero__sub{font-size:17px}
+  .hero .btn,.res .btn,.cta .btn{width:100%;justify-content:space-between}
+  .sec{padding:80px var(--pad)}
+  .h2{font-size:38px}
+  .lista li{font-size:17px;gap:18px;padding:20px 0}
+  .lista li i{width:26px;font-size:12px;padding-top:3px}
+  .res{padding:88px var(--pad);gap:28px}
+  .res blockquote{font-size:31px}
+  .res p,.oq__top p,.cta p{font-size:16px}
+  .oq__top{margin-bottom:36px}
+  .pilar h3{font-size:30px}.pilar p,.etapa p{font-size:16px}
+  .etapa b{font-size:46px}.etapa h3{font-size:28px}
+  .proc .h2{margin-bottom:36px}.dep .h2{margin-bottom:36px}
+  .qa button{font-size:24px;padding-top:24px}
+  .qa .resp p{font-size:16px}
+  .cta{padding:96px var(--pad) 120px}
+  .cta h2{font-size:40px;margin:24px 0}
+  .rodape{padding:64px var(--pad) 96px}
+  .rodape__top{flex-direction:column;gap:32px}
+  .rodape .logo{width:150px}
+  .rodape__info{font-size:16px;width:auto}
+  .rodape hr{margin:32px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.card,.stripe,.hero h1 .ln>span,.script{opacity:1!important;transform:none!important;clip-path:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="topo">
+  <a href="#" aria-label="Estúdio Amave, início"><svg class="logo" viewBox="0 0 180 56" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estúdio Amave">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M75.6892 17.294C73.7562 17.575 72.0872 18.4304 70.7387 19.8313C69.9592 20.641 69.5223 21.2518 69.0499 22.1919C68.6605 22.9668 68.1937 24.2571 68.2498 24.4033C68.2789 24.4793 68.9663 24.7106 69.0043 24.6573C69.0126 24.6458 69.1282 24.3032 69.2614 23.896C70.1966 21.0369 72.417 18.8774 74.9953 18.3195C75.7251 18.1615 76.891 18.1599 77.5369 18.3159C79.0003 18.669 80.3213 19.6303 81.201 20.9829C82.032 22.261 82.4336 23.5544 82.7423 25.9486L82.7873 26.2956L78.3469 26.3264C73.9138 26.3572 73.9056 26.3575 73.0531 26.5467C71.1892 26.9604 70.1318 27.5014 69.0368 28.6016C68.4311 29.2101 68.2727 29.4226 67.9788 30.021C67.527 30.9408 67.3884 31.5081 67.3897 32.4325C67.3937 35.1974 69.452 37.4256 72.7036 38.1848C74.1891 38.5318 75.896 38.5581 77.3766 38.2571C79.333 37.8596 81.1351 36.836 82.2935 35.4647C82.5408 35.1723 82.7678 34.9301 82.7985 34.9264C82.8285 34.9228 82.854 35.5881 82.854 36.4048V37.8898H85.6751V32.5995C85.6751 29.5211 85.6429 26.9678 85.5979 26.4926C85.3327 23.675 84.3406 21.3404 82.7199 19.7196C81.548 18.5474 80.421 17.8945 78.8085 17.4536C78.4234 17.3484 77.9775 17.3047 77.0993 17.2865C76.446 17.2728 75.8113 17.2762 75.6892 17.294ZM98.172 17.3253C95.6551 17.664 93.5465 19.3377 92.2113 22.0561C92.0157 22.4543 91.8097 22.9137 91.7542 23.0771C91.6643 23.3403 91.6501 23.0598 91.6328 20.6084L91.6133 17.8426H88.7937V37.8898H91.6066L91.6343 32.5995C91.665 26.8193 91.6688 26.7674 92.1349 24.9205C93.0707 21.2175 95.4475 18.554 98.112 18.2242C100.263 17.958 101.955 19.3238 102.659 21.893L102.861 22.6316L102.938 37.8527L105.789 37.893L105.816 32.6011C105.846 26.885 105.855 26.7393 106.28 25.0353C106.784 23.0222 107.622 21.3967 108.794 20.1628C110.041 18.8498 111.328 18.2101 112.739 18.2015C113.493 18.1969 113.886 18.2836 114.486 18.5861C115.975 19.3381 116.872 20.9891 117.083 23.3682C117.124 23.8322 117.156 27.1771 117.156 31.0403L117.157 37.8898H119.984L119.959 30.7062C119.933 23.6928 119.929 23.5076 119.777 22.8868C119.191 20.5098 117.789 18.7104 115.844 17.8364C114.182 17.0893 112.11 17.1068 110.421 17.8821C108.506 18.7608 106.799 20.7535 105.978 23.0687L105.771 23.6544L105.568 22.8294C104.901 20.1212 103.04 18.1113 100.642 17.5099C99.8602 17.3139 98.8284 17.2369 98.172 17.3253ZM130.262 17.294C127.228 17.7352 124.714 19.6896 123.392 22.6355C123.085 23.3207 122.766 24.3741 122.845 24.4428C122.921 24.509 123.548 24.6954 123.575 24.6601C123.585 24.647 123.681 24.3523 123.788 24.0053C124.541 21.5626 126.359 19.5029 128.53 18.6345C129.252 18.3459 130.016 18.202 130.856 18.1969C131.787 18.1911 132.432 18.3413 133.306 18.7675C135.09 19.6376 136.282 21.2606 136.906 23.6711C137.091 24.3856 137.16 24.7793 137.318 26.0234L137.353 26.2965L132.953 26.3243C128.742 26.3507 128.52 26.3591 127.752 26.5185C126.412 26.7968 125.266 27.2522 124.47 27.8228C123.859 28.2612 123.077 29.0879 122.739 29.6526C121.678 31.4227 121.678 33.3975 122.736 35.1995C123.107 35.8296 124.137 36.8233 124.842 37.2305C126.81 38.3677 129.501 38.7566 131.948 38.2577C133.894 37.8613 135.699 36.841 136.847 35.4882L137.316 34.937L137.39 37.8527L140.248 37.893V32.6383C140.248 27.2392 140.209 26.2619 139.946 24.952C139.265 21.5696 137.199 18.8835 134.447 17.8011C133.452 17.4097 132.93 17.3128 131.673 17.2866C131.019 17.2728 130.385 17.2762 130.262 17.294ZM168.177 17.3248C165.876 17.5609 163.797 18.5701 162.07 20.2893C160.846 21.5086 160.029 22.8541 159.489 24.5429C159.267 25.2355 159.033 26.3545 159.033 26.7243V26.8994L152.239 26.9381V27.7548L158.94 27.7934L158.987 28.0247C159.012 28.1519 159.033 28.4105 159.033 28.5994C159.034 29.0904 159.233 30.1606 159.454 30.8639C160.423 33.9367 162.934 36.5646 165.976 37.6883C167.682 38.3187 169.402 38.5699 170.932 38.4123C173.844 38.1125 176.334 36.3128 177.767 33.4719C178.132 32.746 178.624 31.3941 178.548 31.3189C178.523 31.2932 178.332 31.2273 178.123 31.1723L177.744 31.0724L177.623 31.4926C177.194 32.9797 176.077 34.8002 175.017 35.7377C174.147 36.5068 173.005 37.1111 171.906 37.383C171.127 37.576 169.458 37.6143 168.723 37.4562C167.127 37.1136 165.987 36.4669 164.832 35.2516C163.272 33.6091 162.301 31.1053 162.214 28.4973L162.189 27.7548L179.325 27.7171L179.278 27.0447C179.011 23.286 176.806 19.9443 173.493 18.2789C171.951 17.5031 169.946 17.1434 168.177 17.3248ZM141.065 17.8711C141.065 17.8867 141.336 18.5132 141.668 19.2633C141.999 20.0133 142.747 21.7128 143.329 23.04C143.911 24.3672 144.989 26.823 145.725 28.4973C146.461 30.1716 147.355 32.2097 147.713 33.0265C148.071 33.8432 148.753 35.3969 149.229 36.479L150.095 38.4466H150.965L152.215 35.3653C152.903 33.6706 153.82 31.4153 154.253 30.3535C154.686 29.2917 155.058 28.3813 155.077 28.3302C155.104 28.2618 154.989 28.2374 154.637 28.2374H154.16L153.617 29.5924C152.741 31.7826 151.596 34.5833 151.565 34.6155C151.532 34.6497 151.434 34.4369 150.492 32.284C150.117 31.4264 149.207 29.3549 148.47 27.6806C147.735 26.0063 146.641 23.5171 146.041 22.149C145.442 20.781 144.77 19.2524 144.549 18.7521L144.148 17.8426H142.606C141.759 17.8426 141.065 17.8554 141.065 17.8711ZM158.313 17.9725C158.286 18.044 157.85 19.1215 157.344 20.367C155.752 24.2901 154.95 26.3057 154.95 26.3819C154.95 26.4224 155.145 26.4555 155.383 26.4555C155.814 26.4555 155.819 26.4533 155.939 26.177C156.491 24.9023 159.256 18.0166 159.256 17.9161C159.256 17.8757 159.054 17.8426 158.809 17.8426C158.45 17.8426 158.351 17.8685 158.313 17.9725ZM168.017 18.2405C167.384 18.3893 167.057 18.5065 166.504 18.7841C164.504 19.7875 163.049 21.9676 162.443 24.8648C162.288 25.6081 162.156 26.7317 162.216 26.7918C162.235 26.811 165.369 26.8267 169.18 26.8267H176.111V26.6313C176.111 26.3512 175.896 25.0119 175.768 24.4879C175.221 22.2657 174.121 20.3974 172.747 19.3576C172.202 18.9455 171.275 18.4874 170.654 18.3223C170.055 18.1636 168.544 18.1167 168.017 18.2405ZM74.1297 27.3139C72.6343 27.6078 71.2961 28.7295 70.6822 30.2042C69.8567 32.1871 70.2472 34.5647 71.6428 36.0539C72.56 37.0326 73.6491 37.507 75.1249 37.5707C77.1196 37.6569 78.783 37.0903 80.0531 35.8928C80.7192 35.264 81.1388 34.669 81.5869 33.7188C82.3347 32.1308 82.7326 30.2132 82.7978 27.8847L82.8165 27.1979L78.7328 27.2049C75.5932 27.2102 74.5293 27.2355 74.1297 27.3139ZM128.702 27.3139C128.409 27.3716 127.886 27.5628 127.502 27.753C125.762 28.6133 124.695 30.5856 124.828 32.6966C124.969 34.9576 126.258 36.7026 128.257 37.3407C129.737 37.8132 132.06 37.5652 133.418 36.7899C134.539 36.1494 135.443 35.1707 136.075 33.9125C136.825 32.4213 137.352 29.9346 137.352 27.8954V27.198L133.287 27.2049C130.163 27.2102 129.102 27.2355 128.702 27.3139Z"/>
+<path d="M28.3478 55.7481C24.2944 55.7481 20.5304 55.0638 17.0561 53.6951C13.6343 52.2738 10.6337 50.2996 8.05426 47.7729C5.52743 45.246 3.55335 42.2981 2.13201 38.9289C0.71067 35.5598 0 31.8749 0 27.8741C0 23.8732 0.71067 20.1883 2.13201 16.8192C3.55335 13.4501 5.52743 10.5022 8.05426 7.97528C10.6337 5.44847 13.6343 3.50071 17.0561 2.13201C20.5304 0.710669 24.2944 0 28.3478 0C32.4013 0 36.1389 0.710669 39.5606 2.13201C43.035 3.50071 46.0357 5.44847 48.5625 7.97528C51.1419 10.5022 53.1424 13.4501 54.5637 16.8192C55.985 20.1883 56.6957 23.8732 56.6957 27.8741C56.6957 31.8749 55.985 35.5598 54.5637 38.9289C53.1424 42.2981 51.1419 45.246 48.5625 47.7729C46.0357 50.2996 43.035 52.2738 39.5606 53.6951C36.1389 55.0638 32.4013 55.7481 28.3478 55.7481ZM28.3478 54.2478C32.1381 54.2478 35.6651 53.5898 38.9289 52.2738C42.1928 50.9577 45.0354 49.1152 47.4569 46.7463C49.8785 44.3248 51.7473 41.5348 53.0634 38.3762C54.4321 35.165 55.1164 31.6643 55.1164 27.8741C55.1164 24.0838 54.4321 20.6094 53.0634 17.4509C51.7473 14.2398 49.8785 11.4497 47.4569 9.0808C45.0354 6.65924 42.1928 4.79044 38.9289 3.47439C35.6651 2.15833 32.1381 1.50031 28.3478 1.50031C24.5576 1.50031 21.0306 2.15833 17.7667 3.47439C14.5029 4.79044 11.6603 6.65924 9.23868 9.0808C6.81717 11.4497 4.92205 14.2398 3.55335 17.4509C2.2373 20.6094 1.57927 24.0838 1.57927 27.8741C1.57927 31.6643 2.2373 35.165 3.55335 38.3762C4.92205 41.5348 6.81717 44.3248 9.23868 46.7463C11.6603 49.1152 14.5029 50.9577 17.7667 52.2738C21.0306 53.5898 24.5576 54.2478 28.3478 54.2478Z"/>
+<path d="M15.4429 52.1117L37.3358 1.35779L38.7859 1.9833L16.893 52.7372L15.4429 52.1117Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.6802 28.3885C28.5921 29.2237 26.6607 30.2747 24.8862 31.5412V33.5209C26.8277 31.9599 28.9959 30.6965 31.3909 29.7308C34.6547 28.4148 38.1817 27.7568 41.972 27.7568C45.7623 27.7568 49.2892 28.4148 52.553 29.7308C53.6819 30.186 54.7604 30.7073 55.7885 31.2948L56.2322 29.8027C55.2605 29.2774 54.2447 28.806 53.1848 28.3885C49.763 26.9671 46.0254 26.2565 41.972 26.2565C37.9186 26.2565 34.1546 26.9671 30.6802 28.3885Z"/>
+</svg>
+</a>
+  <a class="btn btn--contorno" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Chamar no WhatsApp<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero__txt">
+    <p class="label rv">Estúdio boutique de branding</p>
+    <h1><span class="script" aria-hidden="true">S</span><span class="ln"><span>Sua marca com</span></span><span class="ln"><span>presença, personalidade</span></span><span class="ln"><span>e valor percebido.</span></span></h1>
+    <p class="hero__sub rv" style="--d:.35s">Identidade visual com estratégia e personalidade, para marcas que não querem disputar atenção pelo menor&nbsp;preço.</p>
+    <div class="rv" style="--d:.5s"><a class="btn" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Chamar no WhatsApp<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a></div>
+  </div>
+  <div class="hero__vis" aria-hidden="true">
+    <div class="stripes" data-parallax=".12"><span class="stripe" style="--x:0px;--w:22px;--xm:4.37%;--wm:14px;opacity:0.55;transition-delay:0.15s"></span><span class="stripe" style="--x:68px;--w:16px;--xm:16.99%;--wm:20px;opacity:0.92;transition-delay:0.22s"></span><span class="stripe" style="--x:143px;--w:30px;--xm:31.07%;--wm:12px;opacity:0.89;transition-delay:0.29s"></span><span class="stripe" style="--x:245px;--w:18px;--xm:47.57%;--wm:18px;opacity:0.86;transition-delay:0.36s"></span><span class="stripe" style="--x:320px;--w:26px;--xm:61.17%;--wm:14px;opacity:0.83;transition-delay:0.43s"></span><span class="stripe" style="--x:416px;--w:14px;--xm:75.24%;--wm:20px;opacity:0.8;transition-delay:0.50s"></span><span class="stripe" style="--x:485px;--w:28px;--xm:88.83%;--wm:16px;opacity:0.77;transition-delay:0.57s"></span><span class="stripe" style="--x:581px;--w:20px;--xm:-100px;--wm:0px;opacity:0.74;transition-delay:0.64s"></span><span class="stripe" style="--x:654px;--w:24px;--xm:-100px;--wm:0px;opacity:0.71;transition-delay:0.71s"></span></div>
+    <div class="card" data-parallax="-.06">
+      <img class="card__img" src="img/mockup.webp" width="404" height="344" alt="Notebooks com a marca Amave na tela">
+      <div class="card__cap"><span class="label">Identidade visual com estratégia</span><em>Estúdio boutique de branding</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="nums" aria-label="Números do estúdio">
+  <div class="num rv"><b data-count="5" data-suf="+">5+</b><span>anos de estúdio criativo</span></div>
+  <div class="num rv" style="--d:.1s"><b data-count="400" data-suf="+">400+</b><span>projetos desenvolvidos</span></div>
+  <div class="num rv" style="--d:.2s"><b data-count="32">32</b><span>estados brasileiros e 4&nbsp;países</span></div>
+  <div class="num rv" style="--d:.3s"><b data-count="15">15</b><span>marcas em gestão de redes há mais de 3&nbsp;anos</span></div>
+</section>
+
+<section class="sec">
+  <div class="two">
+    <div class="two__head">
+      <p class="label rv">Identificação</p>
+      <h2 class="h2 rv" style="--d:.1s">Você se identifica?</h2>
+      <p class="rv" style="--d:.2s">Se alguma dessas frases já passou pela sua cabeça, a Amave foi feita para&nbsp;você.</p>
+    </div>
+    <ol class="lista">
+      <li class="rv from-r"><i>01</i><span>Meu negócio cresceu, mas minha marca ainda não transmite o nível de profissionalismo que eu&nbsp;entrego.</span></li>
+      <li class="rv from-r" style="--d:.08s"><i>02</i><span>Olho para outras marcas do meu segmento e sinto que minha apresentação poderia ser muito&nbsp;melhor.</span></li>
+      <li class="rv from-r" style="--d:.16s"><i>03</i><span>Quero atrair clientes que valorizem meu trabalho, mas tenho dificuldade em transmitir esse&nbsp;posicionamento.</span></li>
+      <li class="rv from-r" style="--d:.24s"><i>04</i><span>Minha empresa está crescendo, mas minha identidade visual é improvisada e não acompanha a evolução do&nbsp;negócio.</span></li>
+      <li class="rv from-r" style="--d:.32s"><i>05</i><span>Quero uma marca sofisticada, que transmita confiança, mas não sei como traduzir isso&nbsp;visualmente.</span></li>
+      <li class="rv from-r" style="--d:.4s"><i>06</i><span>Minha marca é parecida com tantas outras do mercado. Quero uma identidade com personalidade e&nbsp;exclusividade.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="res">
+  <p class="label rv">O resultado</p>
+  <blockquote class="rv" style="--d:.1s">Uma marca que não precisa disputar atenção pelo menor preço, porque aprende a comunicar aquilo que a torna&nbsp;única.</blockquote>
+  <p class="rv" style="--d:.2s">O resultado é uma marca com presença, personalidade e valor&nbsp;percebido.</p>
+  <div class="rv" style="--d:.3s"><a class="btn" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Chamar no WhatsApp<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a></div>
+</section>
+
+<section class="sec">
+  <div class="oq__top">
+    <div><p class="label rv">Identidade visual</p><h2 class="h2 rv" style="--d:.1s">Uma marca sólida, sofisticada e&nbsp;relevante</h2></div>
+    <p class="rv" style="--d:.2s">O Estúdio Amave oferece soluções completas para marcas que desejam construir uma presença sólida, sofisticada e relevante em seus mercados. Nosso trabalho integra estratégia, identidade, comunicação e posicionamento, acompanhando cada marca desde a concepção até o fortalecimento da presença no ambiente&nbsp;digital.</p>
+  </div>
+  <div class="pilares">
+    <div class="pilar rv"><i>01</i><h3>Estratégia</h3><p>Direção criativa e estratégica em cada decisão da&nbsp;marca.</p></div>
+    <div class="pilar rv" style="--d:.1s"><i>02</i><h3>Identidade</h3><p>Uma identidade com personalidade, exclusividade e atenção aos&nbsp;detalhes.</p></div>
+    <div class="pilar rv" style="--d:.2s"><i>03</i><h3>Comunicação</h3><p>Uma linguagem refinada e contemporânea, que desperta&nbsp;desejo.</p></div>
+    <div class="pilar rv" style="--d:.3s"><i>04</i><h3>Posicionamento</h3><p>Valor percebido para atrair quem valoriza o seu&nbsp;trabalho.</p></div>
+  </div>
+</section>
+
+<section class="sec proc">
+  <p class="label rv">Como funciona</p>
+  <h2 class="h2 rv" style="--d:.1s">Do primeiro contato ao resultado&nbsp;final</h2>
+  <div class="etapas">
+    <div class="etapa rv"><b>01</b><h3>Conversa inicial</h3><p>Cada projeto começa com uma conversa para compreender a história, os objetivos, as particularidades e o momento da sua&nbsp;marca.</p></div>
+    <div class="etapa rv" style="--d:.15s"><b>02</b><h3>Processo estruturado</h3><p>A partir desse primeiro contato, conduzimos você por um processo estruturado, com direção criativa e estratégica em cada&nbsp;etapa.</p></div>
+    <div class="etapa rv" style="--d:.3s"><b>03</b><h3>Marca com presença</h3><p>Integramos branding, comunicação e presença digital, da concepção ao fortalecimento da sua marca no ambiente&nbsp;digital.</p></div>
+  </div>
+</section>
+
+<section class="sec dif">
+  <div class="two">
+    <div><p class="label rv">Diferenciais</p><h2 class="h2 rv" style="--d:.1s">Por que escolher o Estúdio&nbsp;Amave</h2></div>
+    <ol class="lista">
+      <li class="rv from-r"><i>01</i><span>Mais de 5 anos de experiência no mercado criativo.</span></li>
+      <li class="rv from-r" style="--d:.07s"><i>02</i><span>Mais de 400 projetos desenvolvidos.</span></li>
+      <li class="rv from-r" style="--d:.14s"><i>03</i><span>Atuação em 32 estados brasileiros e 4 países.</span></li>
+      <li class="rv from-r" style="--d:.21s"><i>04</i><span>Atendimento próximo, consultivo e personalizado.</span></li>
+      <li class="rv from-r" style="--d:.28s"><i>05</i><span>Direção criativa e estratégica em cada projeto.</span></li>
+      <li class="rv from-r" style="--d:.35s"><i>06</i><span>Integração entre branding, comunicação e presença&nbsp;digital.</span></li>
+      <li class="rv from-r" style="--d:.42s"><i>07</i><span>Compromisso com qualidade, exclusividade e atenção aos&nbsp;detalhes.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec dep">
+  <p class="label rv">Depoimentos</p>
+  <h2 class="h2 rv" style="--d:.1s">Marcas que confiaram na&nbsp;Amave</h2>
+  <div class="prints">
+    <div class="print rv zoom"><span class="label">Print de depoimento 1</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom" style="--d:.1s"><span class="label">Print de depoimento 2</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom" style="--d:.2s"><span class="label">Print de depoimento 3</span><small>Substituir pelo print enviado pelo cliente</small></div>
+    <div class="print rv zoom" style="--d:.3s"><span class="label">Print de depoimento 4</span><small>Substituir pelo print enviado pelo cliente</small></div>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="two">
+    <div><p class="label rv">Dúvidas</p><h2 class="h2 rv" style="--d:.1s">Antes de começar, tire suas&nbsp;dúvidas</h2></div>
+    <div>
+      <div class="qa open rv" style="--d:0.0s"><button aria-expanded="true">Será que o investimento realmente vai valer a&nbsp;pena?<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Uma identidade com personalidade e valor percebido ajuda sua marca a atrair clientes que valorizam o seu trabalho, sem precisar disputar atenção pelo menor&nbsp;preço.</p></div></div></div><div class="qa open rv" style="--d:0.1s"><button aria-expanded="true">Será que o estúdio vai compreender a essência do meu&nbsp;negócio?<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Todo projeto começa com uma conversa para entender a sua história, os seus objetivos e o momento da marca. É a partir dela que a identidade é&nbsp;construída.</p></div></div></div><div class="qa open rv" style="--d:0.2s"><button aria-expanded="true">Já contratei profissionais antes e não tive a experiência que&nbsp;esperava.<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Nosso atendimento é próximo, consultivo e personalizado, com direção criativa e estratégica em cada projeto e atenção aos&nbsp;detalhes.</p></div></div></div><div class="qa open rv" style="--d:0.3s"><button aria-expanded="true">Vou ter o suporte e a atenção que meu negócio&nbsp;merece?<span class="sinal" aria-hidden="true"></span></button><div class="resp"><div><p>Acompanhamos cada marca da concepção até o fortalecimento da presença no digital. Hoje, 15 marcas contam com a nossa gestão de redes há mais de 3&nbsp;anos.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta__glow"></div>
+  <p class="label rv">Estúdio Amave</p>
+  <h2 class="rv" style="--d:.1s">Prontos para passar<br>para o próximo nível?<br><em>Seja cliente Amave!</em></h2>
+  <p class="rv" style="--d:.2s">Chame no WhatsApp e conte a história da sua marca. Atendimento próximo, consultivo e&nbsp;personalizado.</p>
+  <div class="rv" style="--d:.3s"><a class="btn btn--claro" href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">Chamar no WhatsApp<span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></span></a></div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape__top">
+    <div class="rv"><svg class="logo" viewBox="0 0 180 56" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estúdio Amave">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M75.6892 17.294C73.7562 17.575 72.0872 18.4304 70.7387 19.8313C69.9592 20.641 69.5223 21.2518 69.0499 22.1919C68.6605 22.9668 68.1937 24.2571 68.2498 24.4033C68.2789 24.4793 68.9663 24.7106 69.0043 24.6573C69.0126 24.6458 69.1282 24.3032 69.2614 23.896C70.1966 21.0369 72.417 18.8774 74.9953 18.3195C75.7251 18.1615 76.891 18.1599 77.5369 18.3159C79.0003 18.669 80.3213 19.6303 81.201 20.9829C82.032 22.261 82.4336 23.5544 82.7423 25.9486L82.7873 26.2956L78.3469 26.3264C73.9138 26.3572 73.9056 26.3575 73.0531 26.5467C71.1892 26.9604 70.1318 27.5014 69.0368 28.6016C68.4311 29.2101 68.2727 29.4226 67.9788 30.021C67.527 30.9408 67.3884 31.5081 67.3897 32.4325C67.3937 35.1974 69.452 37.4256 72.7036 38.1848C74.1891 38.5318 75.896 38.5581 77.3766 38.2571C79.333 37.8596 81.1351 36.836 82.2935 35.4647C82.5408 35.1723 82.7678 34.9301 82.7985 34.9264C82.8285 34.9228 82.854 35.5881 82.854 36.4048V37.8898H85.6751V32.5995C85.6751 29.5211 85.6429 26.9678 85.5979 26.4926C85.3327 23.675 84.3406 21.3404 82.7199 19.7196C81.548 18.5474 80.421 17.8945 78.8085 17.4536C78.4234 17.3484 77.9775 17.3047 77.0993 17.2865C76.446 17.2728 75.8113 17.2762 75.6892 17.294ZM98.172 17.3253C95.6551 17.664 93.5465 19.3377 92.2113 22.0561C92.0157 22.4543 91.8097 22.9137 91.7542 23.0771C91.6643 23.3403 91.6501 23.0598 91.6328 20.6084L91.6133 17.8426H88.7937V37.8898H91.6066L91.6343 32.5995C91.665 26.8193 91.6688 26.7674 92.1349 24.9205C93.0707 21.2175 95.4475 18.554 98.112 18.2242C100.263 17.958 101.955 19.3238 102.659 21.893L102.861 22.6316L102.938 37.8527L105.789 37.893L105.816 32.6011C105.846 26.885 105.855 26.7393 106.28 25.0353C106.784 23.0222 107.622 21.3967 108.794 20.1628C110.041 18.8498 111.328 18.2101 112.739 18.2015C113.493 18.1969 113.886 18.2836 114.486 18.5861C115.975 19.3381 116.872 20.9891 117.083 23.3682C117.124 23.8322 117.156 27.1771 117.156 31.0403L117.157 37.8898H119.984L119.959 30.7062C119.933 23.6928 119.929 23.5076 119.777 22.8868C119.191 20.5098 117.789 18.7104 115.844 17.8364C114.182 17.0893 112.11 17.1068 110.421 17.8821C108.506 18.7608 106.799 20.7535 105.978 23.0687L105.771 23.6544L105.568 22.8294C104.901 20.1212 103.04 18.1113 100.642 17.5099C99.8602 17.3139 98.8284 17.2369 98.172 17.3253ZM130.262 17.294C127.228 17.7352 124.714 19.6896 123.392 22.6355C123.085 23.3207 122.766 24.3741 122.845 24.4428C122.921 24.509 123.548 24.6954 123.575 24.6601C123.585 24.647 123.681 24.3523 123.788 24.0053C124.541 21.5626 126.359 19.5029 128.53 18.6345C129.252 18.3459 130.016 18.202 130.856 18.1969C131.787 18.1911 132.432 18.3413 133.306 18.7675C135.09 19.6376 136.282 21.2606 136.906 23.6711C137.091 24.3856 137.16 24.7793 137.318 26.0234L137.353 26.2965L132.953 26.3243C128.742 26.3507 128.52 26.3591 127.752 26.5185C126.412 26.7968 125.266 27.2522 124.47 27.8228C123.859 28.2612 123.077 29.0879 122.739 29.6526C121.678 31.4227 121.678 33.3975 122.736 35.1995C123.107 35.8296 124.137 36.8233 124.842 37.2305C126.81 38.3677 129.501 38.7566 131.948 38.2577C133.894 37.8613 135.699 36.841 136.847 35.4882L137.316 34.937L137.39 37.8527L140.248 37.893V32.6383C140.248 27.2392 140.209 26.2619 139.946 24.952C139.265 21.5696 137.199 18.8835 134.447 17.8011C133.452 17.4097 132.93 17.3128 131.673 17.2866C131.019 17.2728 130.385 17.2762 130.262 17.294ZM168.177 17.3248C165.876 17.5609 163.797 18.5701 162.07 20.2893C160.846 21.5086 160.029 22.8541 159.489 24.5429C159.267 25.2355 159.033 26.3545 159.033 26.7243V26.8994L152.239 26.9381V27.7548L158.94 27.7934L158.987 28.0247C159.012 28.1519 159.033 28.4105 159.033 28.5994C159.034 29.0904 159.233 30.1606 159.454 30.8639C160.423 33.9367 162.934 36.5646 165.976 37.6883C167.682 38.3187 169.402 38.5699 170.932 38.4123C173.844 38.1125 176.334 36.3128 177.767 33.4719C178.132 32.746 178.624 31.3941 178.548 31.3189C178.523 31.2932 178.332 31.2273 178.123 31.1723L177.744 31.0724L177.623 31.4926C177.194 32.9797 176.077 34.8002 175.017 35.7377C174.147 36.5068 173.005 37.1111 171.906 37.383C171.127 37.576 169.458 37.6143 168.723 37.4562C167.127 37.1136 165.987 36.4669 164.832 35.2516C163.272 33.6091 162.301 31.1053 162.214 28.4973L162.189 27.7548L179.325 27.7171L179.278 27.0447C179.011 23.286 176.806 19.9443 173.493 18.2789C171.951 17.5031 169.946 17.1434 168.177 17.3248ZM141.065 17.8711C141.065 17.8867 141.336 18.5132 141.668 19.2633C141.999 20.0133 142.747 21.7128 143.329 23.04C143.911 24.3672 144.989 26.823 145.725 28.4973C146.461 30.1716 147.355 32.2097 147.713 33.0265C148.071 33.8432 148.753 35.3969 149.229 36.479L150.095 38.4466H150.965L152.215 35.3653C152.903 33.6706 153.82 31.4153 154.253 30.3535C154.686 29.2917 155.058 28.3813 155.077 28.3302C155.104 28.2618 154.989 28.2374 154.637 28.2374H154.16L153.617 29.5924C152.741 31.7826 151.596 34.5833 151.565 34.6155C151.532 34.6497 151.434 34.4369 150.492 32.284C150.117 31.4264 149.207 29.3549 148.47 27.6806C147.735 26.0063 146.641 23.5171 146.041 22.149C145.442 20.781 144.77 19.2524 144.549 18.7521L144.148 17.8426H142.606C141.759 17.8426 141.065 17.8554 141.065 17.8711ZM158.313 17.9725C158.286 18.044 157.85 19.1215 157.344 20.367C155.752 24.2901 154.95 26.3057 154.95 26.3819C154.95 26.4224 155.145 26.4555 155.383 26.4555C155.814 26.4555 155.819 26.4533 155.939 26.177C156.491 24.9023 159.256 18.0166 159.256 17.9161C159.256 17.8757 159.054 17.8426 158.809 17.8426C158.45 17.8426 158.351 17.8685 158.313 17.9725ZM168.017 18.2405C167.384 18.3893 167.057 18.5065 166.504 18.7841C164.504 19.7875 163.049 21.9676 162.443 24.8648C162.288 25.6081 162.156 26.7317 162.216 26.7918C162.235 26.811 165.369 26.8267 169.18 26.8267H176.111V26.6313C176.111 26.3512 175.896 25.0119 175.768 24.4879C175.221 22.2657 174.121 20.3974 172.747 19.3576C172.202 18.9455 171.275 18.4874 170.654 18.3223C170.055 18.1636 168.544 18.1167 168.017 18.2405ZM74.1297 27.3139C72.6343 27.6078 71.2961 28.7295 70.6822 30.2042C69.8567 32.1871 70.2472 34.5647 71.6428 36.0539C72.56 37.0326 73.6491 37.507 75.1249 37.5707C77.1196 37.6569 78.783 37.0903 80.0531 35.8928C80.7192 35.264 81.1388 34.669 81.5869 33.7188C82.3347 32.1308 82.7326 30.2132 82.7978 27.8847L82.8165 27.1979L78.7328 27.2049C75.5932 27.2102 74.5293 27.2355 74.1297 27.3139ZM128.702 27.3139C128.409 27.3716 127.886 27.5628 127.502 27.753C125.762 28.6133 124.695 30.5856 124.828 32.6966C124.969 34.9576 126.258 36.7026 128.257 37.3407C129.737 37.8132 132.06 37.5652 133.418 36.7899C134.539 36.1494 135.443 35.1707 136.075 33.9125C136.825 32.4213 137.352 29.9346 137.352 27.8954V27.198L133.287 27.2049C130.163 27.2102 129.102 27.2355 128.702 27.3139Z"/>
+<path d="M28.3478 55.7481C24.2944 55.7481 20.5304 55.0638 17.0561 53.6951C13.6343 52.2738 10.6337 50.2996 8.05426 47.7729C5.52743 45.246 3.55335 42.2981 2.13201 38.9289C0.71067 35.5598 0 31.8749 0 27.8741C0 23.8732 0.71067 20.1883 2.13201 16.8192C3.55335 13.4501 5.52743 10.5022 8.05426 7.97528C10.6337 5.44847 13.6343 3.50071 17.0561 2.13201C20.5304 0.710669 24.2944 0 28.3478 0C32.4013 0 36.1389 0.710669 39.5606 2.13201C43.035 3.50071 46.0357 5.44847 48.5625 7.97528C51.1419 10.5022 53.1424 13.4501 54.5637 16.8192C55.985 20.1883 56.6957 23.8732 56.6957 27.8741C56.6957 31.8749 55.985 35.5598 54.5637 38.9289C53.1424 42.2981 51.1419 45.246 48.5625 47.7729C46.0357 50.2996 43.035 52.2738 39.5606 53.6951C36.1389 55.0638 32.4013 55.7481 28.3478 55.7481ZM28.3478 54.2478C32.1381 54.2478 35.6651 53.5898 38.9289 52.2738C42.1928 50.9577 45.0354 49.1152 47.4569 46.7463C49.8785 44.3248 51.7473 41.5348 53.0634 38.3762C54.4321 35.165 55.1164 31.6643 55.1164 27.8741C55.1164 24.0838 54.4321 20.6094 53.0634 17.4509C51.7473 14.2398 49.8785 11.4497 47.4569 9.0808C45.0354 6.65924 42.1928 4.79044 38.9289 3.47439C35.6651 2.15833 32.1381 1.50031 28.3478 1.50031C24.5576 1.50031 21.0306 2.15833 17.7667 3.47439C14.5029 4.79044 11.6603 6.65924 9.23868 9.0808C6.81717 11.4497 4.92205 14.2398 3.55335 17.4509C2.2373 20.6094 1.57927 24.0838 1.57927 27.8741C1.57927 31.6643 2.2373 35.165 3.55335 38.3762C4.92205 41.5348 6.81717 44.3248 9.23868 46.7463C11.6603 49.1152 14.5029 50.9577 17.7667 52.2738C21.0306 53.5898 24.5576 54.2478 28.3478 54.2478Z"/>
+<path d="M15.4429 52.1117L37.3358 1.35779L38.7859 1.9833L16.893 52.7372L15.4429 52.1117Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.6802 28.3885C28.5921 29.2237 26.6607 30.2747 24.8862 31.5412V33.5209C26.8277 31.9599 28.9959 30.6965 31.3909 29.7308C34.6547 28.4148 38.1817 27.7568 41.972 27.7568C45.7623 27.7568 49.2892 28.4148 52.553 29.7308C53.6819 30.186 54.7604 30.7073 55.7885 31.2948L56.2322 29.8027C55.2605 29.2774 54.2447 28.806 53.1848 28.3885C49.763 26.9671 46.0254 26.2565 41.972 26.2565C37.9186 26.2565 34.1546 26.9671 30.6802 28.3885Z"/>
+</svg>
+</div>
+    <div class="rodape__info rv" style="--d:.1s">
+      <span>Itapuranga, Goiás</span>
+      <span>Atendimento: 08h30 às 12h e 13h30 às 18h</span>
+      <span><a href="https://wa.me/5562999515770?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20projetos%20do%20Est%C3%BAdio%20Amave." target="_blank" rel="noopener">WhatsApp (62) 99951-5770</a></span>
+    </div>
+  </div>
+  <hr>
+  <small>© 2026 Estúdio Amave. Todos os direitos reservados.</small>
+</footer>
+
+<script>
+(function(){
+  var d=document;
+  requestAnimationFrame(function(){setTimeout(function(){d.documentElement.classList.add('loaded')},60)});
+  // header
+  var h=d.querySelector('.header');
+  function onS(){h.classList.toggle('scrolled',scrollY>40);par()}
+  // reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');if(e.target.querySelector('[data-count]'))count(e.target.querySelector('[data-count]'));io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  // contadores
+  function count(el){var to=+el.dataset.count,suf=el.dataset.suf||'',t0=null,dur=1600;
+    function st(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e)+suf;if(p<1)requestAnimationFrame(st)}
+    el.textContent='0'+suf;requestAnimationFrame(st)}
+  // parallax leve no hero
+  var px=[].slice.call(d.querySelectorAll('[data-parallax]'));
+  var mq=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function par(){if(mq)return;var y=scrollY;if(y>1200)return;px.forEach(function(el){el.style.translate='0 '+(y*+el.dataset.parallax).toFixed(1)+'px'})}
+  addEventListener('scroll',onS,{passive:true});onS();
+  // faq
+  d.querySelectorAll('.qa button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentNode,o=q.classList.toggle('open');b.setAttribute('aria-expanded',o)})});
+})();
+</script>
+</body>
+</html>
